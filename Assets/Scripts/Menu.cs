@@ -4,6 +4,13 @@ namespace cln
 {
     public class Menu : MonoBehaviour
     {
+        protected MenuManager MenuManager;
+
+        public void Initialize(MenuManager menuManager)
+        {
+            MenuManager = menuManager;
+        }
+        
         public void Show()
         {
             gameObject.SetActive(true);

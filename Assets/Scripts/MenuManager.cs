@@ -16,6 +16,7 @@ namespace cln
             foreach (var menu in _menus)
             {
                 _typeToMenuMap.Add(menu.GetType(), menu);
+                menu.Initialize(this);
                 menu.Close();
             }
             

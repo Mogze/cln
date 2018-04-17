@@ -8,20 +8,24 @@ namespace cln
     {
         [SerializeField] private Elements _elements;
 
-        void Start()
+        private void Start()
         {
             Debug.Log(GetType());
             
             _elements.PlayButton.onClick.AddListener(OnClickPlay);
         }
 
-        void Update()
+        private void Update()
         {
         }
 
         private void OnClickPlay()
         {
             Debug.Log("on click play");
+            GameObject.Find("Main").GetComponent<Main>().StartGame();
+            
+            MenuManager.Close(typeof(MainMenu));
+            MenuManager.Show(typeof(GameMenu));
         }
 
         private void OnDestroy()

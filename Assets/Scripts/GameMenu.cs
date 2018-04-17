@@ -1,5 +1,6 @@
 ﻿using System;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace cln
 {
@@ -7,17 +8,20 @@ namespace cln
     {
         [SerializeField] private Elements _elements;
 
-        void Start()
+        private void Start()
         {
         }
 
-        void Update()
+        private void Update()
         {
         }
 
         [Serializable]
         private struct Elements
         {
+            public Text ScoreText;
+            public Text HighScoreText;
+            public Button PauseButton;
         }
     }
 }
