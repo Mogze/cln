@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace cln
 {
-    public class GameMenu : MonoBehaviour
+    public class GameMenu : Menu
     {
         [SerializeField] private Elements _elements;
 
