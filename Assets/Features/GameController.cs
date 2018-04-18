@@ -1,6 +1,6 @@
 ﻿using Entitas;
 
-namespace cln.Features
+namespace cln
 {
     public class GameController
     {
