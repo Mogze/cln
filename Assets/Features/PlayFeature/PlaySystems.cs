@@ -5,6 +5,7 @@
         public PlaySystems(Contexts contexts)
         {
             Add(new JumpSystem(contexts.game));
+            Add(new MoveSystem());
         }
     }
 }

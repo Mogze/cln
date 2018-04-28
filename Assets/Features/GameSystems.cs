@@ -7,6 +7,8 @@
             Add(new StartSystems(contexts));
             Add(new InputSystems(contexts));
             Add(new ViewSystems(contexts));
+            Add(new PlaySystems(contexts));
+            Add(new ScoreSystems(contexts));
         }
     }
 }
