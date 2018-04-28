@@ -8,25 +8,25 @@
 //------------------------------------------------------------------------------
 public partial class GameEntity {
 
-    public cln.ViewComponent view { get { return (cln.ViewComponent)GetComponent(GameComponentsLookup.View); } }
-    public bool hasView { get { return HasComponent(GameComponentsLookup.View); } }
+    public cln.PrefabComponent prefab { get { return (cln.PrefabComponent)GetComponent(GameComponentsLookup.Prefab); } }
+    public bool hasPrefab { get { return HasComponent(GameComponentsLookup.Prefab); } }
 
-    public void AddView(UnityEngine.GameObject newValue) {
-        var index = GameComponentsLookup.View;
-        var component = CreateComponent<cln.ViewComponent>(index);
+    public void AddPrefab(string newValue) {
+        var index = GameComponentsLookup.Prefab;
+        var component = CreateComponent<cln.PrefabComponent>(index);
         component.value = newValue;
         AddComponent(index, component);
     }
 
-    public void ReplaceView(UnityEngine.GameObject newValue) {
-        var index = GameComponentsLookup.View;
-        var component = CreateComponent<cln.ViewComponent>(index);
+    public void ReplacePrefab(string newValue) {
+        var index = GameComponentsLookup.Prefab;
+        var component = CreateComponent<cln.PrefabComponent>(index);
         component.value = newValue;
         ReplaceComponent(index, component);
     }
 
-    public void RemoveView() {
-        RemoveComponent(GameComponentsLookup.View);
+    public void RemovePrefab() {
+        RemoveComponent(GameComponentsLookup.Prefab);
     }
 }
 
@@ -40,17 +40,17 @@ public partial class GameEntity {
 //------------------------------------------------------------------------------
 public sealed partial class GameMatcher {
 
-    static Entitas.IMatcher<GameEntity> _matcherView;
+    static Entitas.IMatcher<GameEntity> _matcherPrefab;
 
-    public static Entitas.IMatcher<GameEntity> View {
+    public static Entitas.IMatcher<GameEntity> Prefab {
         get {
-            if (_matcherView == null) {
-                var matcher = (Entitas.Matcher<GameEntity>)Entitas.Matcher<GameEntity>.AllOf(GameComponentsLookup.View);
+            if (_matcherPrefab == null) {
+                var matcher = (Entitas.Matcher<GameEntity>)Entitas.Matcher<GameEntity>.AllOf(GameComponentsLookup.Prefab);
                 matcher.componentNames = GameComponentsLookup.componentNames;
-                _matcherView = matcher;
+                _matcherPrefab = matcher;
             }
 
-            return _matcherView;
+            return _matcherPrefab;
         }
     }
 }

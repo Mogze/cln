@@ -9,19 +9,25 @@
 public static class GameComponentsLookup {
 
     public const int Input = 0;
-    public const int Score = 1;
-    public const int View = 2;
+    public const int Position = 1;
+    public const int Prefab = 2;
+    public const int Score = 3;
+    public const int View = 4;
 
-    public const int TotalComponents = 3;
+    public const int TotalComponents = 5;
 
     public static readonly string[] componentNames = {
         "Input",
+        "Position",
+        "Prefab",
         "Score",
         "View"
     };
 
     public static readonly System.Type[] componentTypes = {
         typeof(cln.InputComponent),
+        typeof(cln.PositionComponent),
+        typeof(cln.PrefabComponent),
         typeof(cln.ScoreComponent),
         typeof(cln.ViewComponent)
     };
