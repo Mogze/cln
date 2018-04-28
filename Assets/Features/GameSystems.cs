@@ -1,11 +1,11 @@
 ﻿namespace cln
 {
-    public class GameSystems : Feature
+    public sealed class GameSystems : Feature
     {
         public GameSystems(Contexts contexts)
         {
             Add(new StartSystems(contexts));
-            Add(new InputSystem());
+            Add(new InputSystems(contexts));
             Add(new ViewSystems(contexts));
         }
     }

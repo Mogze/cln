@@ -8,7 +8,7 @@ namespace cln
     {
         private IContext<GameEntity> _context;
         private Transform _gameContainer;
-        
+
         public AddViewSystem(IContext<GameEntity> context) : base(context)
         {
             _context = context;
@@ -29,7 +29,6 @@ namespace cln
         {
             foreach (var gameEntity in entities)
             {
-                Debug.Log("test");
                 gameEntity.AddView(Object.Instantiate(Resources.Load<GameObject>(gameEntity.prefab.value)));
                 gameEntity.view.value.transform.SetParent(_gameContainer);
             }

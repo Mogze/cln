@@ -2,10 +2,10 @@
 
 namespace cln
 {
-    public class GameController
+    public sealed class GameController
     {
         private Systems _systems;
-        
+
         public GameController()
         {
             _systems = new GameSystems(Contexts.sharedInstance);
