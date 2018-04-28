@@ -4,7 +4,7 @@ using UnityEngine;
 public class Main : MonoBehaviour
 {
     private GameController _gameController;
-    
+
     void Start()
     {
     }
