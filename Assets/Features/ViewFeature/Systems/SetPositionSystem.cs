@@ -21,7 +21,10 @@ namespace cln
 
         protected override void Execute(List<GameEntity> entities)
         {
-            throw new System.NotImplementedException();
+            foreach (var gameEntity in entities)
+            {
+                gameEntity.view.value.transform.localPosition = gameEntity.position.value;
+            }
         }
     }
 }

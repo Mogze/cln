@@ -4,7 +4,7 @@
     {
         public StartSystems(Contexts contexts)
         {
-            Add(new StartSystem());
+            Add(new StartSystem(contexts.game));
         }
     }
 }
