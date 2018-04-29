@@ -6,7 +6,7 @@ namespace cln
     public sealed class JumpSystem : IExecuteSystem
     {
         private IGroup<GameEntity> _cubeGroup;
-        private Vector3 _jumpDecrease = new Vector3(0f, -40f, 0f);
+        private Vector3 _jumpDecrease = new Vector3(0f, -60f, 0f);
 
         public JumpSystem(IContext<GameEntity> context)
         {
