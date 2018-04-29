@@ -8,6 +8,7 @@
             Add(new InputSystems(contexts));
             Add(new ViewSystems(contexts));
             Add(new PlaySystems(contexts));
+            Add(new CameraSystems(contexts));
             Add(new ScoreSystems(contexts));
         }
     }
