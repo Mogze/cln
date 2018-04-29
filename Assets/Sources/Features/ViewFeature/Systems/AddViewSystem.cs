@@ -6,12 +6,10 @@ namespace cln
 {
     public sealed class AddViewSystem : ReactiveSystem<GameEntity>
     {
-        private IContext<GameEntity> _context;
-        private Transform _gameContainer;
+        private readonly Transform _gameContainer;
 
         public AddViewSystem(IContext<GameEntity> context) : base(context)
         {
-            _context = context;
             _gameContainer = new GameObject("GameContainer").transform;
         }
 

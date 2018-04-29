@@ -28,8 +28,11 @@ namespace cln
             {
                 inputEntity.Destroy();
                 var cubeEntity = _context.GetGroup(GameMatcher.Cube).GetSingleEntity();
-                if (!cubeEntity.hasVelocity)
-                    cubeEntity.AddVelocity(GameConfig.JumpSpeed);
+                if (!cubeEntity.isJumping)
+                {
+                    cubeEntity.ReplaceVelocity(cubeEntity.velocity.value + GameConfig.JumpVelocity);
+                    cubeEntity.isJumping = true;
+                }
             }
         }
     }

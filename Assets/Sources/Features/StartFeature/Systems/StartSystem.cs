@@ -23,6 +23,7 @@ namespace cln
             var cubeEntity = _context.CreateEntity();
             cubeEntity.AddPrefab("Prefabs/Game/Cube");
             cubeEntity.AddPosition(new Vector3(-8f, -9f, 0f));
+            cubeEntity.AddVelocity(GameConfig.CubeMoveVelocity);
             cubeEntity.isCube = true;
         }
     }

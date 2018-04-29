@@ -10,18 +10,20 @@ public static class GameComponentsLookup {
 
     public const int Cube = 0;
     public const int Input = 1;
-    public const int Obstacle = 2;
-    public const int Position = 3;
-    public const int Prefab = 4;
-    public const int Score = 5;
-    public const int Velocity = 6;
-    public const int View = 7;
+    public const int Jumping = 2;
+    public const int Obstacle = 3;
+    public const int Position = 4;
+    public const int Prefab = 5;
+    public const int Score = 6;
+    public const int Velocity = 7;
+    public const int View = 8;
 
-    public const int TotalComponents = 8;
+    public const int TotalComponents = 9;
 
     public static readonly string[] componentNames = {
         "Cube",
         "Input",
+        "Jumping",
         "Obstacle",
         "Position",
         "Prefab",
@@ -33,6 +35,7 @@ public static class GameComponentsLookup {
     public static readonly System.Type[] componentTypes = {
         typeof(cln.CubeComponent),
         typeof(cln.InputComponent),
+        typeof(cln.JumpingComponent),
         typeof(cln.ObstacleComponent),
         typeof(cln.PositionComponent),
         typeof(cln.PrefabComponent),
