@@ -6,7 +6,7 @@ namespace cln
     public sealed class JumpSystem : IExecuteSystem
     {
         private IGroup<GameEntity> _cubeGroup;
-        private Vector3 _jumpDecrease = new Vector3(0f, -1f, 0f);
+        private Vector3 _jumpDecrease = new Vector3(0f, -40f, 0f);
 
         public JumpSystem(IContext<GameEntity> context)
         {
@@ -18,7 +18,7 @@ namespace cln
             foreach (var cubeEntity in _cubeGroup.GetEntities())
             {
                 if (cubeEntity.hasVelocity)
-                    cubeEntity.ReplaceVelocity(cubeEntity.velocity.value - _jumpDecrease * Time.deltaTime);
+                    cubeEntity.ReplaceVelocity(cubeEntity.velocity.value + _jumpDecrease * Time.deltaTime);
             }
         }
     }

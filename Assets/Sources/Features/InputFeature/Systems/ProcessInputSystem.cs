@@ -5,8 +5,11 @@ namespace cln
 {
     public class ProcessInputSystem : ReactiveSystem<GameEntity>
     {
+        private IContext<GameEntity> _context;
+
         public ProcessInputSystem(IContext<GameEntity> context) : base(context)
         {
+            _context = context;
         }
 
         protected override ICollector<GameEntity> GetTrigger(IContext<GameEntity> context)
@@ -24,6 +27,9 @@ namespace cln
             foreach (var inputEntity in entities)
             {
                 inputEntity.Destroy();
+                var cubeEntity = _context.GetGroup(GameMatcher.Cube).GetSingleEntity();
+                if (!cubeEntity.hasVelocity)
+                    cubeEntity.AddVelocity(GameConfig.JumpSpeed);
             }
         }
     }
