@@ -5,12 +5,10 @@ namespace cln
 {
     public sealed class MoveSystem : IExecuteSystem
     {
-        private IContext<GameEntity> _context;
-        private IGroup<GameEntity> moveGroup;
+        private readonly IGroup<GameEntity> moveGroup;
 
         public MoveSystem(IContext<GameEntity> context)
         {
-            _context = context;
             moveGroup = context.GetGroup(GameMatcher.Velocity);
         }
 
