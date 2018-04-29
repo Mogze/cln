@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using Entitas;
+using Entitas.Unity;
 using UnityEngine;
 
 namespace cln
@@ -29,6 +30,12 @@ namespace cln
             {
                 gameEntity.AddView(Object.Instantiate(Resources.Load<GameObject>(gameEntity.prefab.value)));
                 gameEntity.view.value.transform.SetParent(_gameContainer);
+
+                if (gameEntity.isCube)
+                {
+                    gameEntity.view.value.AddComponent<EntityLink>().Link(gameEntity, Contexts.sharedInstance.game);
+                    gameEntity.view.value.AddComponent<CubeCollisionEmitter>();
+                }
             }
         }
     }
