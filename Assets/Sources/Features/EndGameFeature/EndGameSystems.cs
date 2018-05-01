@@ -4,7 +4,7 @@
     {
         public EndGameSystems(Contexts contexts)
         {
-//            Add(new EndSystem());
+            Add(new EndSystem(contexts.game));
         }
     }
 }
