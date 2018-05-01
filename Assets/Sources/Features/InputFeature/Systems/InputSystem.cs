@@ -14,7 +14,7 @@ namespace cln
         
         public void Execute()
         {
-            if (Input.GetMouseButton(0))
+            if (Input.GetMouseButtonDown(0))
             {
                 _context.CreateEntity().isInput = true;
             }

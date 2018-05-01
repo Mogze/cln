@@ -33,6 +33,11 @@ namespace cln
                     cubeEntity.ReplaceVelocity(cubeEntity.velocity.value + GameConfig.JumpVelocity);
                     cubeEntity.isJumping = true;
                 }
+                else if (!cubeEntity.isDoubleJumping)
+                {
+                    cubeEntity.ReplaceVelocity(cubeEntity.velocity.value + GameConfig.JumpVelocity);
+                    cubeEntity.isDoubleJumping = true;
+                }
             }
         }
     }

@@ -22,6 +22,7 @@ namespace cln
                     if (cubeEntity.position.value.y < -9f)
                     {
                         cubeEntity.isJumping = false;
+                        cubeEntity.isDoubleJumping = false;
                         cubeEntity.ReplacePosition(new Vector3(cubeEntity.position.value.x, -9f, cubeEntity.position.value.z));
                         cubeEntity.ReplaceVelocity(GameConfig.CubeMoveVelocity);
                     }
