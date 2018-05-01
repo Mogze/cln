@@ -4,13 +4,14 @@
     {
         public GameSystems(Contexts contexts)
         {
-            Add(new StartSystems(contexts));
+            Add(new StartGameSystems(contexts));
             Add(new InputSystems(contexts));
             Add(new ViewSystems(contexts));
             Add(new PlaySystems(contexts));
             Add(new CollisionSystems(contexts));
             Add(new CameraSystems(contexts));
             Add(new ScoreSystems(contexts));
+            Add(new EndGameSystems(contexts));
         }
     }
 }

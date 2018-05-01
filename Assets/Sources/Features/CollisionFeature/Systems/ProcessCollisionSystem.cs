@@ -25,6 +25,10 @@ namespace cln
             foreach (var gameEntity in entities)
             {
                 Debug.Log(gameEntity.collision.other.name);
+                if (gameEntity.collision.other.CompareTag(GameConfig.ObstacleTag))
+                {
+                    
+                }
                 gameEntity.RemoveCollision();
             }
         }
