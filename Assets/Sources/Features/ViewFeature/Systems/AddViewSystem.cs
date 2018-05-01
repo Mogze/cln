@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace cln
 {
-    public sealed class AddViewSystem : ReactiveSystem<GameEntity>
+    public sealed class AddViewSystem : ReactiveSystem<GameEntity>, ITearDownSystem
     {
         private readonly Transform _gameContainer;
 
@@ -37,6 +37,11 @@ namespace cln
                     gameEntity.view.value.AddComponent<CubeCollisionEmitter>();
                 }
             }
+        }
+
+        public void TearDown()
+        {
+            Object.Destroy(_gameContainer.gameObject);
         }
     }
 }

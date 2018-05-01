@@ -1,4 +1,5 @@
 ﻿using Entitas;
+using zehreken.i_cheat;
 
 namespace cln
 {
@@ -18,9 +19,12 @@ namespace cln
             _systems.Cleanup();
         }
 
-        ~GameController()
+        public void Destroy()
         {
+            Dbg.Log("End game");
+            _systems.Cleanup();
             _systems.ClearReactiveSystems();
+            _systems.DeactivateReactiveSystems();
             _systems.TearDown();
         }
     }

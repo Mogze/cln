@@ -4,9 +4,11 @@ using UnityEngine;
 public class Main : MonoBehaviour
 {
     private GameController _gameController;
+    public static Main Instance { get; private set; }
 
     void Start()
     {
+        Instance = this;
     }
 
     void Update()
@@ -24,6 +26,7 @@ public class Main : MonoBehaviour
 
     public void EndGame()
     {
+        _gameController.Destroy();
         _gameController = null;
     }
 }
