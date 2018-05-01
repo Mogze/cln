@@ -6,8 +6,11 @@ namespace cln
 {
     public sealed class ProcessCollisionSystem : ReactiveSystem<GameEntity>
     {
+        private IContext<GameEntity> _context;
+
         public ProcessCollisionSystem(IContext<GameEntity> context) : base(context)
         {
+            _context = context;
         }
 
         protected override ICollector<GameEntity> GetTrigger(IContext<GameEntity> context)
@@ -27,7 +30,7 @@ namespace cln
                 Debug.Log(gameEntity.collision.other.name);
                 if (gameEntity.collision.other.CompareTag(GameConfig.ObstacleTag))
                 {
-                    
+                    var endGameEntity = _context.CreateEntity().isEndGame = true;
                 }
                 gameEntity.RemoveCollision();
             }

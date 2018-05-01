@@ -21,6 +21,7 @@ namespace cln
 
         protected override void Execute(List<GameEntity> entities)
         {
+            
         }
     }
 }
