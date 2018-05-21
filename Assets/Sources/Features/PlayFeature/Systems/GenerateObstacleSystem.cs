@@ -24,7 +24,6 @@ namespace cln
                 var obstacleEntity = _context.CreateEntity();
                 obstacleEntity.AddPrefab("Prefabs/Game/Obstacle");
                 obstacleEntity.AddPosition(new Vector3(20f, -9f, 0f));
-                obstacleEntity.AddVelocity(Vector3.left * 5f);
                 obstacleEntity.isObstacle = true;
             }
         }

@@ -24,7 +24,8 @@ namespace cln
                         cubeEntity.isJumping = false;
                         cubeEntity.isDoubleJumping = false;
                         cubeEntity.ReplacePosition(new Vector3(cubeEntity.position.value.x, -9f, cubeEntity.position.value.z));
-                        cubeEntity.ReplaceVelocity(GameConfig.CubeMoveVelocity);
+                        cubeEntity.ReplaceVelocity(new Vector3(cubeEntity.velocity.value.x, 0f,
+                            cubeEntity.velocity.value.z));
                     }
                 }
             }
