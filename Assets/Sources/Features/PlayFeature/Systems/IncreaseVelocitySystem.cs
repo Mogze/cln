@@ -5,7 +5,7 @@ namespace cln
 {
     public sealed class IncreaseVelocitySystem : IInitializeSystem, IExecuteSystem
     {
-        private IContext<GameEntity> _context;
+        private readonly IContext<GameEntity> _context;
         private GameEntity _cube;
         private float _timer = 0f;
 

@@ -5,10 +5,11 @@ namespace cln
 {
     public class GenerateObstacleSystem : IInitializeSystem, IExecuteSystem
     {
-        private IContext<GameEntity> _context;
-        private const float TimerStart = 5f;
+        private readonly IContext<GameEntity> _context;
+        private const float TimerStart = 1f;
         private float _timer = TimerStart;
         private GameEntity _cubeEntity;
+        private int _obstacleIndex = 0;
 
         public GenerateObstacleSystem(IContext<GameEntity> context)
         {
@@ -18,6 +19,14 @@ namespace cln
         public void Initialize()
         {
             _cubeEntity = _context.GetGroup(GameMatcher.Cube).GetSingleEntity();
+
+            for (; _obstacleIndex < 3; _obstacleIndex++)
+            {
+                var obstacleEntity = _context.CreateEntity();
+                obstacleEntity.AddPrefab("Prefabs/Game/Platform");
+                obstacleEntity.AddPosition(new Vector3(_obstacleIndex * 20f, -10f, 0f));
+                obstacleEntity.isObstacle = true;
+            }
         }
 
         public void Execute()
@@ -29,8 +38,9 @@ namespace cln
 
                 var obstacleEntity = _context.CreateEntity();
                 obstacleEntity.AddPrefab("Prefabs/Game/Obstacle");
-                obstacleEntity.AddPosition(new Vector3(_cubeEntity.position.value.x + 20f, -9f, 0f));
+                obstacleEntity.AddPosition(new Vector3(_obstacleIndex * 20f, -10f, 0f));
                 obstacleEntity.isObstacle = true;
+                _obstacleIndex++;
             }
         }
     }

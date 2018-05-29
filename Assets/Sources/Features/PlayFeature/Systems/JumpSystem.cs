@@ -5,7 +5,7 @@ namespace cln
 {
     public sealed class JumpSystem : IExecuteSystem
     {
-        private IGroup<GameEntity> _cubeGroup;
+        private readonly IGroup<GameEntity> _cubeGroup;
 
         public JumpSystem(IContext<GameEntity> context)
         {

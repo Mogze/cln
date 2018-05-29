@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using Entitas;
+using UnityEngine;
 
 namespace cln
 {
@@ -35,7 +36,7 @@ namespace cln
                 }
                 else if (!cubeEntity.isDoubleJumping)
                 {
-                    cubeEntity.ReplaceVelocity(cubeEntity.velocity.value + GameConfig.JumpVelocity);
+                    cubeEntity.ReplaceVelocity(cubeEntity.velocity.value + GameConfig.JumpVelocity - new Vector3(0f, cubeEntity.velocity.value.y, 0f));
                     cubeEntity.isDoubleJumping = true;
                 }
             }
