@@ -20,7 +20,7 @@ namespace cln
         {
             _cubeEntity = _context.GetGroup(GameMatcher.Cube).GetSingleEntity();
 
-            for (; _obstacleIndex < 3; _obstacleIndex++)
+            for (; _obstacleIndex < 1; _obstacleIndex++)
             {
                 var obstacleEntity = _context.CreateEntity();
                 obstacleEntity.AddPrefab("Prefabs/Game/Platform");
