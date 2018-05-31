@@ -18,6 +18,10 @@ namespace cln.Sources.Services
         public void RequestBanner()
         {
             _bannerView = new BannerView(BannerId, AdSize.Banner, AdPosition.Top);
+
+            AdRequest request = new AdRequest.Builder().Build();
+            
+            _bannerView.LoadAd(request);
         }
     }
 }
