@@ -7,6 +7,7 @@ namespace cln.Sources.Services
     {
         private const string AppId = "ca-app-pub-8389931397130414~7907377047";
         private const string BannerId = "ca-app-pub-8389931397130414/3968132034";
+        private const string TestBannerId = "ca-app-pub-3940256099942544/6300978111";
         private BannerView _bannerView;
         
         public AdService()
@@ -17,7 +18,7 @@ namespace cln.Sources.Services
 
         public void RequestBanner()
         {
-            _bannerView = new BannerView(BannerId, AdSize.Banner, AdPosition.Top);
+            _bannerView = new BannerView(TestBannerId, AdSize.Banner, AdPosition.Top);
 
             AdRequest request = new AdRequest.Builder().Build();
             
