@@ -20,7 +20,7 @@ namespace cln
         {
             _cubeEntity = _context.GetGroup(GameMatcher.Cube).GetSingleEntity();
 
-            for (; _obstacleIndex < 1; _obstacleIndex++)
+            for (; _obstacleIndex < 2; _obstacleIndex++)
             {
                 var obstacleEntity = _context.CreateEntity();
                 obstacleEntity.AddPrefab("Prefabs/Game/Platform");
@@ -37,7 +37,7 @@ namespace cln
                 _timer += TimerStart;
 
                 var obstacleEntity = _context.CreateEntity();
-                obstacleEntity.AddPrefab("Prefabs/Game/Obstacle");
+                obstacleEntity.AddPrefab(Random.Range(0, 2) == 0 ? "Prefabs/Game/Obstacle" : "Prefabs/Game/Obstacle 1");
                 obstacleEntity.AddPosition(new Vector3(_obstacleIndex * 20f, -10f, 0f));
                 obstacleEntity.isObstacle = true;
                 _obstacleIndex++;
