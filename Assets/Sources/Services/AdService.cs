@@ -14,6 +14,8 @@ namespace cln.Sources.Services
         {
             Dbg.Log("AdService is started");
             MobileAds.Initialize(AppId);
+            
+            RequestBanner();
         }
 
         public void RequestBanner()
