@@ -4,7 +4,7 @@
     {
         public PlaySystems(Contexts contexts)
         {
-            Add(new JumpSystem(contexts.game));
+            Add(new GravitySystem(contexts.game));
             Add(new GenerateObstacleSystem(contexts.game));
             Add(new MoveSystem(contexts.game));
             Add(new IncreaseVelocitySystem(contexts.game));

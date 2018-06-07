@@ -38,7 +38,7 @@ namespace cln
 
                 var obstacleEntity = _context.CreateEntity();
                 obstacleEntity.AddPrefab(Random.Range(0, 2) == 0 ? "Prefabs/Game/Obstacle" : "Prefabs/Game/Obstacle 1");
-                obstacleEntity.AddPosition(new Vector3(_obstacleIndex * 20f, -10f, 0f));
+                obstacleEntity.AddPosition(new Vector3(_obstacleIndex * 20f, -10f + Random.Range(0, 6), 0f));
                 obstacleEntity.isObstacle = true;
                 _obstacleIndex++;
             }

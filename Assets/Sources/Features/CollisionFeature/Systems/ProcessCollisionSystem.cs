@@ -25,14 +25,21 @@ namespace cln
 
         protected override void Execute(List<GameEntity> entities)
         {
-            foreach (var gameEntity in entities)
+            foreach (var cubeEntity in entities)
             {
-                Debug.Log(gameEntity.collision.other.name);
-                if (gameEntity.collision.other.CompareTag(GameConfig.ObstacleTag))
+                Debug.Log(cubeEntity.collision.other.name);
+                if (cubeEntity.collision.other.CompareTag(GameConfig.ObstacleTag))
                 {
                     var endGameEntity = _context.CreateEntity().isEndGame = true;
                 }
-                gameEntity.RemoveCollision();
+                else if (cubeEntity.collision.other.CompareTag(GameConfig.PlatformTag))
+                {
+                    cubeEntity.isJumping = false;
+                    cubeEntity.isDoubleJumping = false;
+//                    cubeEntity.ReplaceVelocity(new Vector3(cubeEntity.velocity.value.x, 0f, cubeEntity.velocity.value.z));
+                    cubeEntity.ReplacePosition(new Vector3(cubeEntity.position.value.x, cubeEntity.collision.other.transform.position.y + 1f, cubeEntity.position.value.z));
+                }
+                cubeEntity.RemoveCollision();
             }
         }
     }
