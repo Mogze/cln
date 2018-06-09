@@ -9,7 +9,7 @@ namespace cln
 
         public GravitySystem(IContext<GameEntity> context)
         {
-            _cubeGroup = context.GetGroup(GameMatcher.Cube);
+            _cubeGroup = context.GetGroup(GameMatcher.AllOf(GameMatcher.Cube, GameMatcher.View));
         }
 
         public void Execute()
