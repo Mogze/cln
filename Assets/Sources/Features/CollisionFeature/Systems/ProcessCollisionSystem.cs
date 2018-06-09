@@ -6,7 +6,7 @@ namespace cln
 {
     public sealed class ProcessCollisionSystem : ReactiveSystem<GameEntity>
     {
-        private IContext<GameEntity> _context;
+        private readonly IContext<GameEntity> _context;
 
         public ProcessCollisionSystem(IContext<GameEntity> context) : base(context)
         {
@@ -36,7 +36,6 @@ namespace cln
                 {
                     cubeEntity.isJumping = false;
                     cubeEntity.isDoubleJumping = false;
-//                    cubeEntity.ReplaceVelocity(new Vector3(cubeEntity.velocity.value.x, 0f, cubeEntity.velocity.value.z));
                     cubeEntity.ReplacePosition(new Vector3(cubeEntity.position.value.x, cubeEntity.collision.other.transform.position.y + 1f, cubeEntity.position.value.z));
                 }
                 cubeEntity.RemoveCollision();

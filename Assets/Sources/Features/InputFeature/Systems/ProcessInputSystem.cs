@@ -4,9 +4,9 @@ using UnityEngine;
 
 namespace cln
 {
-    public class ProcessInputSystem : ReactiveSystem<GameEntity>
+    public sealed class ProcessInputSystem : ReactiveSystem<GameEntity>
     {
-        private IContext<GameEntity> _context;
+        private readonly IContext<GameEntity> _context;
 
         public ProcessInputSystem(IContext<GameEntity> context) : base(context)
         {

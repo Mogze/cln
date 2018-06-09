@@ -18,8 +18,11 @@ namespace cln
             {
                 cubeEntity.isGrounded = Physics.Linecast(cubeEntity.view.value.transform.position,
                     cubeEntity.view.value.transform.position + Vector3.down * 0.5f);
+
                 if (!cubeEntity.isGrounded)
+                {
                     cubeEntity.ReplaceVelocity(cubeEntity.velocity.value + GameConfig.JumpDeceleration);
+                }
                 else if (!cubeEntity.isJumping)
                 {
                     cubeEntity.ReplaceVelocity(

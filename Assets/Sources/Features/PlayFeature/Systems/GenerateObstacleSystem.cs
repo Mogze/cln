@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace cln
 {
-    public class GenerateObstacleSystem : IInitializeSystem, IExecuteSystem
+    public sealed class GenerateObstacleSystem : IInitializeSystem, IExecuteSystem
     {
         private readonly IContext<GameEntity> _context;
         private const float TimerStart = 1f;
@@ -24,7 +24,7 @@ namespace cln
             {
                 var obstacleEntity = _context.CreateEntity();
                 obstacleEntity.AddPrefab("Prefabs/Game/Platform");
-                obstacleEntity.AddPosition(new Vector3(_obstacleIndex * 20f, -10f, 0f));
+                obstacleEntity.AddPosition(new Vector3(_obstacleIndex * 20f, -5f, 0f));
                 obstacleEntity.isObstacle = true;
             }
         }
@@ -38,7 +38,7 @@ namespace cln
 
                 var obstacleEntity = _context.CreateEntity();
                 obstacleEntity.AddPrefab(Random.Range(0, 2) == 0 ? "Prefabs/Game/Obstacle" : "Prefabs/Game/Obstacle 1");
-                obstacleEntity.AddPosition(new Vector3(_obstacleIndex * 20f, -10f + Random.Range(0, 6), 0f));
+                obstacleEntity.AddPosition(new Vector3(_obstacleIndex * 20f, -5f + Random.Range(0, 6), 0f));
                 obstacleEntity.isObstacle = true;
                 _obstacleIndex++;
             }

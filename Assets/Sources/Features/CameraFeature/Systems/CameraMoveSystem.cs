@@ -5,7 +5,7 @@ namespace cln
 {
     public sealed class CameraMoveSystem : IInitializeSystem, IExecuteSystem
     {
-        private IContext<GameEntity> _context;
+        private readonly IContext<GameEntity> _context;
         private Transform _cameraTransform;
         private GameEntity _cubeEntity;
 
@@ -22,7 +22,7 @@ namespace cln
 
         public void Execute()
         {
-            var diff = new Vector3(_cubeEntity.position.value.x + 8f, _cubeEntity.position.value.y + 9f, -10f) - _cameraTransform.position;
+            var diff = new Vector3(_cubeEntity.position.value.x + 8f, _cubeEntity.position.value.y + 5f, -10f) - _cameraTransform.position;
             _cameraTransform.Translate(diff * 2f * Time.deltaTime);
         }
     }
