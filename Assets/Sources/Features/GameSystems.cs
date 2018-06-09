@@ -4,14 +4,19 @@
     {
         public GameSystems(Contexts contexts)
         {
-            Add(new StartGameSystems(contexts));
-            Add(new InputSystems(contexts));
-            Add(new ViewSystems(contexts));
-            Add(new PlaySystems(contexts));
-            Add(new CollisionSystems(contexts));
-            Add(new CameraSystems(contexts));
+            Add(new StartSystem(contexts.game));
+            Add(new InputSystem(contexts.game));
+            Add(new ProcessInputSystem(contexts.game));
+            Add(new AddViewSystem(contexts.game));
+            Add(new SetPositionSystem(contexts.game));
+            Add(new GravitySystem(contexts.game));
+            Add(new GenerateObstacleSystem(contexts.game));
+            Add(new MoveSystem(contexts.game));
+            Add(new IncreaseVelocitySystem(contexts.game));
+            Add(new ProcessCollisionSystem(contexts.game));
+            Add(new CameraMoveSystem(contexts.game));
             Add(new ScoreSystems(contexts));
-            Add(new EndGameSystems(contexts));
+            Add(new EndSystem(contexts.game));
         }
     }
 }
