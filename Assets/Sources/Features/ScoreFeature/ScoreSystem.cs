@@ -1,30 +1,38 @@
 ﻿using System.Collections.Generic;
 using Entitas;
+using UnityEngine;
+using zehreken.i_cheat;
 
 namespace cln
 {
-    public sealed class ScoreSystem : ReactiveSystem<GameEntity>
+    public class ScoreSystem : ReactiveSystem<GameEntity>
     {
-        private IContext<GameEntity> _context;
-
+        private readonly GameEntity _highScoreEntity;
+        
         public ScoreSystem(IContext<GameEntity> context) : base(context)
         {
-            _context = context;
+            _highScoreEntity = context.CreateEntity();
+            _highScoreEntity.AddHighScore(PlayerPrefs.GetInt("high_score"));
         }
 
         protected override ICollector<GameEntity> GetTrigger(IContext<GameEntity> context)
         {
-            throw new System.NotImplementedException();
+            return context.CreateCollector(GameMatcher.GameScore);
         }
 
         protected override bool Filter(GameEntity entity)
         {
-            throw new System.NotImplementedException();
+            return true;
         }
 
         protected override void Execute(List<GameEntity> entities)
         {
-            throw new System.NotImplementedException();
+            var scoreEntity = entities.SingleEntity();
+            if (scoreEntity.gameScore.value > _highScoreEntity.highScore.value)
+            {
+                _highScoreEntity.ReplaceHighScore(scoreEntity.gameScore.value);
+                PlayerPrefs.SetInt("high_score", _highScoreEntity.highScore.value);
+            }
         }
     }
 }

@@ -8,25 +8,25 @@
 //------------------------------------------------------------------------------
 public partial class GameEntity {
 
-    public cln.ScoreComponent score { get { return (cln.ScoreComponent)GetComponent(GameComponentsLookup.Score); } }
-    public bool hasScore { get { return HasComponent(GameComponentsLookup.Score); } }
+    public cln.HighScoreComponent highScore { get { return (cln.HighScoreComponent)GetComponent(GameComponentsLookup.HighScore); } }
+    public bool hasHighScore { get { return HasComponent(GameComponentsLookup.HighScore); } }
 
-    public void AddScore(int newValue) {
-        var index = GameComponentsLookup.Score;
-        var component = CreateComponent<cln.ScoreComponent>(index);
+    public void AddHighScore(int newValue) {
+        var index = GameComponentsLookup.HighScore;
+        var component = CreateComponent<cln.HighScoreComponent>(index);
         component.value = newValue;
         AddComponent(index, component);
     }
 
-    public void ReplaceScore(int newValue) {
-        var index = GameComponentsLookup.Score;
-        var component = CreateComponent<cln.ScoreComponent>(index);
+    public void ReplaceHighScore(int newValue) {
+        var index = GameComponentsLookup.HighScore;
+        var component = CreateComponent<cln.HighScoreComponent>(index);
         component.value = newValue;
         ReplaceComponent(index, component);
     }
 
-    public void RemoveScore() {
-        RemoveComponent(GameComponentsLookup.Score);
+    public void RemoveHighScore() {
+        RemoveComponent(GameComponentsLookup.HighScore);
     }
 }
 
@@ -40,17 +40,17 @@ public partial class GameEntity {
 //------------------------------------------------------------------------------
 public sealed partial class GameMatcher {
 
-    static Entitas.IMatcher<GameEntity> _matcherScore;
+    static Entitas.IMatcher<GameEntity> _matcherHighScore;
 
-    public static Entitas.IMatcher<GameEntity> Score {
+    public static Entitas.IMatcher<GameEntity> HighScore {
         get {
-            if (_matcherScore == null) {
-                var matcher = (Entitas.Matcher<GameEntity>)Entitas.Matcher<GameEntity>.AllOf(GameComponentsLookup.Score);
+            if (_matcherHighScore == null) {
+                var matcher = (Entitas.Matcher<GameEntity>)Entitas.Matcher<GameEntity>.AllOf(GameComponentsLookup.HighScore);
                 matcher.componentNames = GameComponentsLookup.componentNames;
-                _matcherScore = matcher;
+                _matcherHighScore = matcher;
             }
 
-            return _matcherScore;
+            return _matcherHighScore;
         }
     }
 }

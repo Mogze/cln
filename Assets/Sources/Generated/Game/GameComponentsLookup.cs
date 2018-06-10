@@ -12,32 +12,38 @@ public static class GameComponentsLookup {
     public const int Cube = 1;
     public const int DoubleJumping = 2;
     public const int EndGame = 3;
-    public const int Grounded = 4;
-    public const int Input = 5;
-    public const int Jumping = 6;
-    public const int Obstacle = 7;
-    public const int Position = 8;
-    public const int Prefab = 9;
-    public const int Score = 10;
-    public const int Velocity = 11;
-    public const int View = 12;
+    public const int GameScore = 4;
+    public const int Grounded = 5;
+    public const int HighScore = 6;
+    public const int Input = 7;
+    public const int Jumping = 8;
+    public const int Obstacle = 9;
+    public const int Position = 10;
+    public const int Prefab = 11;
+    public const int Velocity = 12;
+    public const int View = 13;
+    public const int GameScoreListener = 14;
+    public const int HighScoreListener = 15;
 
-    public const int TotalComponents = 13;
+    public const int TotalComponents = 16;
 
     public static readonly string[] componentNames = {
         "Collision",
         "Cube",
         "DoubleJumping",
         "EndGame",
+        "GameScore",
         "Grounded",
+        "HighScore",
         "Input",
         "Jumping",
         "Obstacle",
         "Position",
         "Prefab",
-        "Score",
         "Velocity",
-        "View"
+        "View",
+        "GameScoreListener",
+        "HighScoreListener"
     };
 
     public static readonly System.Type[] componentTypes = {
@@ -45,14 +51,17 @@ public static class GameComponentsLookup {
         typeof(cln.CubeComponent),
         typeof(cln.DoubleJumpingComponent),
         typeof(cln.EndGame),
+        typeof(cln.GameScoreComponent),
         typeof(cln.GroundedComponent),
+        typeof(cln.HighScoreComponent),
         typeof(cln.InputComponent),
         typeof(cln.JumpingComponent),
         typeof(cln.ObstacleComponent),
         typeof(cln.PositionComponent),
         typeof(cln.PrefabComponent),
-        typeof(cln.ScoreComponent),
         typeof(cln.VelocityComponent),
-        typeof(cln.ViewComponent)
+        typeof(cln.ViewComponent),
+        typeof(GameScoreListenerComponent),
+        typeof(HighScoreListenerComponent)
     };
 }

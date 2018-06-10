@@ -4,6 +4,8 @@
     {
         public GameSystems(Contexts contexts)
         {
+            Add(new GameEventSystems(contexts));
+            
             Add(new StartSystem(contexts.game));
 
             Add(new InputSystem(contexts.game));
@@ -26,7 +28,7 @@
 
             Add(new IncreaseVelocitySystem(contexts.game));
 
-//            Add(new ScoreSystem(contexts.game));
+            Add(new ScoreSystem(contexts.game));
 
             Add(new EndSystem(contexts.game));
         }
