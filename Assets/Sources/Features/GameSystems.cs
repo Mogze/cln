@@ -12,8 +12,6 @@
 
             Add(new GenerateObstacleSystem(contexts.game));
 
-            Add(new IncreaseVelocitySystem(contexts.game));
-
             Add(new GravitySystem(contexts.game));
 
             Add(new MoveSystem(contexts.game));
@@ -25,6 +23,8 @@
             Add(new SetPositionSystem(contexts.game));
 
             Add(new CameraMoveSystem(contexts.game));
+
+            Add(new IncreaseVelocitySystem(contexts.game));
 
 //            Add(new ScoreSystem(contexts.game));
 
