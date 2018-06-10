@@ -10,6 +10,7 @@ public class Main : MonoBehaviour
 
     void Start()
     {
+        Application.targetFrameRate = 30;
         Instance = this;
         
         _adService = new AdService();
