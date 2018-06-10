@@ -11,6 +11,15 @@ namespace cln
         private GameEntity _cubeEntity;
         private int _obstacleIndex = 0;
 
+        private readonly string[] obstacles =
+        {
+            "Obstacle",
+            "Obstacle 1",
+            "Obstacle 2",
+            "Obstacle 3",
+            "Obstacle 4"
+        };
+
         public GenerateObstacleSystem(IContext<GameEntity> context)
         {
             _context = context;
@@ -24,7 +33,7 @@ namespace cln
             {
                 var obstacleEntity = _context.CreateEntity();
                 obstacleEntity.AddPrefab("Prefabs/Game/Platform");
-                obstacleEntity.AddPosition(new Vector3(_obstacleIndex * 20f, -5f, 0f));
+                obstacleEntity.AddPosition(new Vector3(_obstacleIndex * 20f, -35f, 0f));
                 obstacleEntity.isObstacle = true;
             }
         }
@@ -37,8 +46,8 @@ namespace cln
                 _timer += TimerStart;
 
                 var obstacleEntity = _context.CreateEntity();
-                obstacleEntity.AddPrefab(Random.Range(0, 2) == 0 ? "Prefabs/Game/Obstacle" : "Prefabs/Game/Obstacle 1");
-                obstacleEntity.AddPosition(new Vector3(_obstacleIndex * 20f, -5f + Random.Range(0, 6), 0f));
+                obstacleEntity.AddPrefab("Prefabs/Game/" + obstacles[Random.Range(0, obstacles.Length)]);
+                obstacleEntity.AddPosition(new Vector3(_obstacleIndex * 20f, -35f + Random.Range(0, 6), 0f));
                 obstacleEntity.isObstacle = true;
                 _obstacleIndex++;
             }

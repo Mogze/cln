@@ -9,12 +9,15 @@ namespace cln
 
         private void Start()
         {
-            _cubeEntity = (GameEntity)GetComponent<EntityLink>().entity;
+            _cubeEntity = (GameEntity) GetComponent<EntityLink>().entity;
         }
 
         private void OnTriggerEnter(Collider other)
         {
-            _cubeEntity.AddCollision(other.gameObject);
+            if (!_cubeEntity.hasCollision)
+            {
+                _cubeEntity.AddCollision(other.gameObject);
+            }
         }
     }
 }
