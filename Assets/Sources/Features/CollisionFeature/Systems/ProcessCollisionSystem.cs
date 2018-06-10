@@ -37,6 +37,8 @@ namespace cln
                     cubeEntity.isJumping = false;
                     cubeEntity.isDoubleJumping = false;
                     cubeEntity.ReplacePosition(new Vector3(cubeEntity.position.value.x, cubeEntity.collision.other.transform.position.y + 20f, cubeEntity.position.value.z));
+                    cubeEntity.ReplaceVelocity(
+                        new Vector3(cubeEntity.velocity.value.x, 0f, cubeEntity.velocity.value.z));
                 }
                 cubeEntity.RemoveCollision();
             }
