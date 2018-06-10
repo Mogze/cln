@@ -22,6 +22,7 @@ namespace cln
         
         public void Execute()
         {
+            if (_cube.velocity.value.x < 11)
             _timer -= Time.deltaTime;
             if (_timer <= 0)
             {

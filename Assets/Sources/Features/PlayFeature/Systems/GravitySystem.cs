@@ -17,17 +17,17 @@ namespace cln
             foreach (var cubeEntity in _cubeGroup.GetEntities())
             {
                 cubeEntity.isGrounded = Physics.Linecast(cubeEntity.view.value.transform.position + Vector3.right * 0.5f,
-                    cubeEntity.view.value.transform.position + Vector3.down * 0.5f);
+                    cubeEntity.view.value.transform.position + Vector3.down * 0.52f);
 
                 if (!cubeEntity.isGrounded)
                 {
                     cubeEntity.ReplaceVelocity(cubeEntity.velocity.value + GameConfig.JumpDeceleration);
                 }
-                else if (!cubeEntity.isJumping)
-                {
-                    cubeEntity.ReplaceVelocity(
-                        new Vector3(cubeEntity.velocity.value.x, 0f, cubeEntity.velocity.value.z));
-                }
+//                else if (!cubeEntity.isJumping)
+//                {
+//                    cubeEntity.ReplaceVelocity(
+//                        new Vector3(cubeEntity.velocity.value.x, 0f, cubeEntity.velocity.value.z));
+//                }
             }
         }
     }

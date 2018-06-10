@@ -31,7 +31,7 @@ namespace cln
                 var cubeEntity = _context.GetGroup(GameMatcher.Cube).GetSingleEntity();
                 if (!cubeEntity.isJumping)
                 {
-                    cubeEntity.ReplaceVelocity(cubeEntity.velocity.value + GameConfig.JumpVelocity);
+                    cubeEntity.ReplaceVelocity(cubeEntity.velocity.value + GameConfig.JumpVelocity - new Vector3(0f, cubeEntity.velocity.value.y, 0f));
                     cubeEntity.isJumping = true;
                 }
                 else if (!cubeEntity.isDoubleJumping)

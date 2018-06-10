@@ -10,6 +10,7 @@ namespace cln
         private float _timer = TimerStart;
         private GameEntity _cubeEntity;
         private int _obstacleIndex = 0;
+        private int _prevHeight = -35;
 
         private readonly string[] obstacles =
         {
@@ -33,7 +34,7 @@ namespace cln
             {
                 var obstacleEntity = _context.CreateEntity();
                 obstacleEntity.AddPrefab("Prefabs/Game/Platform");
-                obstacleEntity.AddPosition(new Vector3(_obstacleIndex * 20f, -35f, 0f));
+                obstacleEntity.AddPosition(new Vector3(_obstacleIndex * 20f, _prevHeight, 0f));
                 obstacleEntity.isObstacle = true;
             }
         }
@@ -47,7 +48,9 @@ namespace cln
 
                 var obstacleEntity = _context.CreateEntity();
                 obstacleEntity.AddPrefab("Prefabs/Game/" + obstacles[Random.Range(0, obstacles.Length)]);
-                obstacleEntity.AddPosition(new Vector3(_obstacleIndex * 20f, -35f + Random.Range(0, 6), 0f));
+                var newHeight = _prevHeight + Random.Range(-5, 6);
+                obstacleEntity.AddPosition(new Vector3(_obstacleIndex * 20f, newHeight, 0f));
+                _prevHeight = newHeight;
                 obstacleEntity.isObstacle = true;
                 _obstacleIndex++;
             }
