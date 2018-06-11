@@ -26,12 +26,12 @@ namespace cln
 
         public void OnGameScore(GameEntity entity, int value)
         {
-            _elements.ScoreText.text = "S:" + value;
+            _elements.ScoreText.text = "Score:" + value;
         }
 
         public void OnHighScore(GameEntity entity, int value)
         {
-            _elements.HighScoreText.text = "H:" + value;
+            _elements.HighScoreText.text = "High:" + value;
         }
 
         [Serializable]
