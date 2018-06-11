@@ -18,7 +18,9 @@ namespace cln
             "Obstacle 1",
             "Obstacle 2",
             "Obstacle 3",
-            "Obstacle 4"
+            "Obstacle 4",
+            "Obstacle 5",
+            "Obstacle 6"
         };
 
         public GenerateObstacleSystem(IContext<GameEntity> context)
