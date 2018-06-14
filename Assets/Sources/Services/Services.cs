@@ -17,12 +17,12 @@ namespace cln.Sources.Services
             }
         }
 
-        public static IService GetAdService()
+        public static AdService GetAdService()
         {
             return (AdService) _services[0];
         }
 
-        public static IService GetAudioService()
+        public static AudioService GetAudioService()
         {
             return (AudioService) _services[1];
         }

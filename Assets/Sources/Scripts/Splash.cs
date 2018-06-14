@@ -13,7 +13,7 @@ namespace cln
 
         private IEnumerator LoadMain()
         {
-            yield return new WaitForSeconds(3f);
+            yield return new WaitForSeconds(1f);
         
             SceneManager.LoadScene("Main");
         }
