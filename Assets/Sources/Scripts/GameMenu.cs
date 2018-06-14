@@ -26,7 +26,7 @@ namespace cln
 
         public void OnGameScore(GameEntity entity, int value)
         {
-            _elements.ScoreText.text = "Score:" + value;
+            _elements.ScoreText.text = value.ToString();
         }
 
         public void OnHighScore(GameEntity entity, int value)

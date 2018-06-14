@@ -13,7 +13,7 @@ public class Main : MonoBehaviour
         Application.targetFrameRate = 30;
         Instance = this;
         
-        _adService = new AdService();
+        Services.Initialize();
     }
 
     void Update()
