@@ -32,7 +32,7 @@ namespace cln
                 {
                     var endGameEntity = _context.CreateEntity().isEndGame = true;
                     Services.GetAudioService().Play(Clip.Die);
-                    Services.GetAdService().RequestInterstitial();
+                    Services.GetAdService().ShowInterstitial();
                 }
                 else if (cubeEntity.collision.other.CompareTag(GameConfig.PlatformTag))
                 {

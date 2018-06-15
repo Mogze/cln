@@ -636,9 +636,9 @@ PlayerSettings:
     UNet: 1
   facebookSdkVersion: 7.9.4
   apiCompatibilityLevel: 2
-  cloudProjectId: 613cf440-78c9-405c-b6e0-03f453de7316
-  projectName: cln
-  organizationId: zehreken
+  cloudProjectId: a1b6676d-7978-4539-ba6f-92232fc48444
+  projectName: 'JJ: The lonely square'
+  organizationId: n-a-30326
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
   disableOldInputManagerSupport: 0

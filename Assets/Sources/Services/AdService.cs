@@ -28,9 +28,10 @@ namespace cln.Sources.Services
             _bannerView = new BannerView(TestBannerId, AdSize.Banner, AdPosition.Top);
             _interstitialAd = new InterstitialAd(TestInterstitialId);
             RequestBanner();
+            RequestInterstitial();
         }
 
-        private void ResetInterstitialTimer()
+        private void RequestInterstitial()
         {
             _interstitialReady = false;
             Main.Instance.StartCoroutine(RunInterstitialTimer());
@@ -38,25 +39,29 @@ namespace cln.Sources.Services
 
         private IEnumerator RunInterstitialTimer()
         {
-            var request = new AdRequest.Builder().Build();
-            _interstitialAd.LoadAd(request);
-            
+            _interstitialAd.LoadAd(new AdRequest.Builder().Build());
+
             yield return new WaitForSeconds(InterstitialPeriod);
             _interstitialReady = true;
+            Dbg.Log(_interstitialReady);
         }
 
         public void RequestBanner()
         {
-            var request = new AdRequest.Builder().Build();
-            _bannerView.LoadAd(request);
+            _bannerView.LoadAd(new AdRequest.Builder().Build());
         }
 
-        public void RequestInterstitial()
+        public void ShowInterstitial()
         {
+            Dbg.Log(_interstitialReady + " " + _interstitialAd.IsLoaded());
             if (_interstitialReady && _interstitialAd.IsLoaded())
             {
                 _interstitialAd.Show();
-                ResetInterstitialTimer();
+                RequestInterstitial();
+            }
+            else if (!_interstitialAd.IsLoaded())
+            {
+                _interstitialAd.LoadAd(new AdRequest.Builder().Build());
             }
         }
     }
