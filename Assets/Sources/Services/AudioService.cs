@@ -12,11 +12,11 @@ namespace cln.Sources.Services
     public class AudioService : IService
     {
         private AudioDictionary _audioDictionary;
-        private AudioSource _audioSource;
+        private readonly AudioSource _audioSource;
 
         public AudioService()
         {
-            _audioSource = new GameObject().AddComponent<AudioSource>();
+            _audioSource = new GameObject("AudioService").AddComponent<AudioSource>();
         }
 
         public void Initialize()

@@ -28,11 +28,11 @@ namespace cln
         {
             foreach (var cubeEntity in entities)
             {
-                Debug.Log(cubeEntity.collision.other.name);
                 if (cubeEntity.collision.other.CompareTag(GameConfig.ObstacleTag))
                 {
                     var endGameEntity = _context.CreateEntity().isEndGame = true;
                     Services.GetAudioService().Play(Clip.Die);
+                    Services.GetAdService().RequestInterstitial();
                 }
                 else if (cubeEntity.collision.other.CompareTag(GameConfig.PlatformTag))
                 {
