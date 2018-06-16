@@ -2,6 +2,7 @@
 using GoogleMobileAds.Api;
 using UnityEngine;
 using zehreken.i_cheat;
+using zehreken.i_cheat.Extensions;
 
 namespace cln.Sources.Services
 {
@@ -19,7 +20,7 @@ namespace cln.Sources.Services
 
         public AdService()
         {
-            Dbg.Log("AdService is started");
+            Dbg.Log("AdService is started".Color(Color.green));
             MobileAds.Initialize(AppId);
         }
 
@@ -39,6 +40,7 @@ namespace cln.Sources.Services
 
         private IEnumerator RunInterstitialTimer()
         {
+            Dbg.Log("loading interstitial");
             _interstitialAd.LoadAd(new AdRequest.Builder().Build());
 
             yield return new WaitForSeconds(InterstitialPeriod);
@@ -53,7 +55,7 @@ namespace cln.Sources.Services
 
         public void ShowInterstitial()
         {
-            Dbg.Log(_interstitialReady + " " + _interstitialAd.IsLoaded());
+            Dbg.Log("loading " + _interstitialReady + " " + _interstitialAd.IsLoaded());
             if (_interstitialReady && _interstitialAd.IsLoaded())
             {
                 _interstitialAd.Show();

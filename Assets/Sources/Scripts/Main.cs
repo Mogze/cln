@@ -29,14 +29,6 @@ public class Main : MonoBehaviour
         _gameController = new GameController();
     }
 
-    void OnGUI()
-    {
-        if (GUI.Button(new Rect(0f, 0f, 500f, 500f), "Show interstitial"))
-        {
-            Services.GetAdService().ShowInterstitial();
-        }
-    }
-
     public void EndGame()
     {
         _gameController.Destroy();
