@@ -14,8 +14,8 @@ namespace cln.Sources.Services
         private const string TestBannerId = "ca-app-pub-3940256099942544/6300978111";
         private const string TestInterstitialId = "ca-app-pub-3940256099942544/1033173712";
         private BannerView _bannerView;
-        private const float InterstitialPeriod = 10f; // in seconds
-        private bool _interstitialReady = true;
+        private const float InterstitialPeriod = 30f; // in seconds
+        private bool _interstitialTimerReady = true;
         private InterstitialAd _interstitialAd;
 
         public AdService()
@@ -26,26 +26,23 @@ namespace cln.Sources.Services
 
         public void Initialize()
         {
+            Dbg.Log("AdService is initialized");
             _bannerView = new BannerView(TestBannerId, AdSize.Banner, AdPosition.Top);
             _interstitialAd = new InterstitialAd(TestInterstitialId);
             RequestBanner();
-            RequestInterstitial();
         }
 
-        private void RequestInterstitial()
+        public void RequestInterstitial()
         {
-            _interstitialReady = false;
-            Main.Instance.StartCoroutine(RunInterstitialTimer());
+            if (!_interstitialAd.IsLoaded())
+                _interstitialAd.LoadAd(new AdRequest.Builder().Build());
         }
 
         private IEnumerator RunInterstitialTimer()
         {
-            Dbg.Log("loading interstitial");
-            _interstitialAd.LoadAd(new AdRequest.Builder().Build());
-
+            _interstitialTimerReady = false;
             yield return new WaitForSeconds(InterstitialPeriod);
-            _interstitialReady = true;
-            Dbg.Log(_interstitialReady);
+            _interstitialTimerReady = true;
         }
 
         public void RequestBanner()
@@ -55,15 +52,10 @@ namespace cln.Sources.Services
 
         public void ShowInterstitial()
         {
-            Dbg.Log("loading " + _interstitialReady + " " + _interstitialAd.IsLoaded());
-            if (_interstitialReady && _interstitialAd.IsLoaded())
+            if (_interstitialTimerReady && _interstitialAd.IsLoaded())
             {
                 _interstitialAd.Show();
-                RequestInterstitial();
-            }
-            else if (!_interstitialAd.IsLoaded())
-            {
-                _interstitialAd.LoadAd(new AdRequest.Builder().Build());
+                Main.Instance.StartCoroutine(RunInterstitialTimer());
             }
         }
     }

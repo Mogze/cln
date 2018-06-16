@@ -1,4 +1,5 @@
 ﻿using System;
+using cln.Sources.Services;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -32,6 +33,7 @@ namespace cln
 
             MenuManager.Close(typeof(MainMenu));
             MenuManager.Show(typeof(GameMenu));
+            Services.GetAdService().RequestInterstitial();
         }
 
         public void OnGameScore(GameEntity entity, int value)
