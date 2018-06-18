@@ -7,7 +7,7 @@
     <application>
         <provider
             android:name="com.google.firebase.provider.FirebaseInitProvider"
-            android:authorities="com.guchanalkan.jj.firebaseinitprovider"
+            android:authorities="com.mogze.jumpjumparcade.firebaseinitprovider"
             android:exported="false"
             android:initOrder="100" />
     </application>
