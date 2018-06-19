@@ -27,8 +27,8 @@ namespace cln.Sources.Services
         public void Initialize()
         {
             Dbg.Log("AdService is initialized");
-            _bannerView = new BannerView(BannerId, AdSize.Banner, AdPosition.Top);
-            _interstitialAd = new InterstitialAd(InterstitialId);
+            _bannerView = new BannerView(TestBannerId, AdSize.Banner, AdPosition.Top);
+            _interstitialAd = new InterstitialAd(TestInterstitialId);
             RequestBanner();
         }
 
