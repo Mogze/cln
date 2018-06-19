@@ -33,6 +33,7 @@ namespace cln
 
             MenuManager.Close(typeof(MainMenu));
             MenuManager.Show(typeof(GameMenu));
+            Services.GetAdService().RequestBanner();
             Services.GetAdService().RequestInterstitial();
         }
 
