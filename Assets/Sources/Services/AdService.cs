@@ -35,7 +35,7 @@ namespace cln.Sources.Services
         public void RequestInterstitial()
         {
             if (!_interstitialAd.IsLoaded())
-                _interstitialAd.LoadAd(new AdRequest.Builder().Build());
+                _interstitialAd.LoadAd(new AdRequest.Builder().AddExtra("max_ad_content_rating", "G").Build());
         }
 
         private IEnumerator RunInterstitialTimer()
@@ -47,7 +47,7 @@ namespace cln.Sources.Services
 
         public void RequestBanner()
         {
-            _bannerView.LoadAd(new AdRequest.Builder().Build());
+            _bannerView.LoadAd(new AdRequest.Builder().AddExtra("max_ad_content_rating", "G").Build());
         }
 
         public void ShowInterstitial()
