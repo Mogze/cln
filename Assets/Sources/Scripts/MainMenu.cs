@@ -15,6 +15,7 @@ namespace cln
             Debug.Log(GetType());
 
             _elements.PlayButton.onClick.AddListener(OnClickPlay);
+            _elements.LeaderboardButton.onClick.AddListener(OnClickLeaderboard);
             _elements.LastScoreText.text = "Last:" + 0;
             _elements.HighScoreText.text = "High:" + PlayerPrefs.GetInt("high_score");
         }
@@ -37,6 +38,18 @@ namespace cln
             Services.GetAdService().RequestInterstitial();
         }
 
+        private void OnClickLeaderboard()
+        {
+            if (Social.localUser.authenticated)
+            {
+                Social.ShowLeaderboardUI();
+            }
+            else
+            {
+                Social.localUser.Authenticate(Main.Instance.OnAuthenticate);
+            }
+        }
+
         public void OnGameScore(GameEntity entity, int value)
         {
             _elements.LastScoreText.text = "Last:" + value;
@@ -45,6 +58,7 @@ namespace cln
         private void OnDestroy()
         {
             _elements.PlayButton.onClick.RemoveListener(OnClickPlay);
+            _elements.LeaderboardButton.onClick.RemoveListener(OnClickLeaderboard);
         }
 
         [Serializable]
@@ -53,6 +67,7 @@ namespace cln
             public Text LastScoreText;
             public Text HighScoreText;
             public Button PlayButton;
+            public Button LeaderboardButton;
         }
     }
 }

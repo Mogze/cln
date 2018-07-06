@@ -1,6 +1,8 @@
 ﻿using cln;
 using cln.Sources.Services;
+using GooglePlayGames;
 using UnityEngine;
+using zehreken.i_cheat;
 
 public class Main : MonoBehaviour
 {
@@ -14,6 +16,9 @@ public class Main : MonoBehaviour
         Instance = this;
         
         Services.Initialize();
+        PlayGamesPlatform.Activate();
+        
+        Social.localUser.Authenticate(OnAuthenticate);
     }
 
     void Update()
@@ -33,5 +38,11 @@ public class Main : MonoBehaviour
     {
         _gameController.Destroy();
         _gameController = null;
+    }
+
+    public void OnAuthenticate(bool success)
+    {
+        Dbg.Log("Successfully connected to Google Play Games");
+        Social.ShowLeaderboardUI();
     }
 }
