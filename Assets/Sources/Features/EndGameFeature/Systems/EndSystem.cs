@@ -1,6 +1,8 @@
 ﻿using System.Collections.Generic;
+using cln.Sources.Services;
 using Entitas;
 using Entitas.Unity;
+using zehreken.i_cheat;
 
 namespace cln
 {
@@ -27,6 +29,9 @@ namespace cln
         {
             foreach (var gameEntity in entities)
             {
+                var highScore = _context.GetGroup(GameMatcher.HighScore).GetSingleEntity().highScore.value;
+                Services.GetGpgService().PublishHighScore(highScore);
+                
                 gameEntity.isEndGame = false;
                 foreach (var entity in _context.GetEntities())
                 {

@@ -40,14 +40,7 @@ namespace cln
 
         private void OnClickLeaderboard()
         {
-            if (Social.localUser.authenticated)
-            {
-                Social.ShowLeaderboardUI();
-            }
-            else
-            {
-                Social.localUser.Authenticate(Main.Instance.OnAuthenticate);
-            }
+            Services.GetGpgService().ShowLeaderboard();
         }
 
         public void OnGameScore(GameEntity entity, int value)
