@@ -7,8 +7,6 @@ namespace cln.Sources.Services
 {
     public class GpgService : IService
     {
-        private const string LeaderboardId = "CgkI5cP4kesEEAIQAQ";
-
         public GpgService()
         {
             Dbg.Log("GPGService is Started".Color(Color.green));
@@ -48,7 +46,7 @@ namespace cln.Sources.Services
         {
             if (IsAuthenticated())
             {
-                Social.ReportScore(value, LeaderboardId, (b) => Dbg.Log("Success: " + b));
+                Social.ReportScore(value, GPGSIds.leaderboard_high_score, (b) => Dbg.Log("Success: " + b));
             }
         }
     }

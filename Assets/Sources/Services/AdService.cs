@@ -35,7 +35,12 @@ namespace cln.Sources.Services
         public void RequestInterstitial()
         {
             if (!_interstitialAd.IsLoaded())
-                _interstitialAd.LoadAd(new AdRequest.Builder().AddExtra("max_ad_content_rating", "G").Build());
+            {
+                _interstitialAd.LoadAd(new AdRequest.Builder()
+                    .AddExtra("max_ad_content_rating", "G")
+//                    .AddExtra("tag_for_under_age_of_consent", "true")
+                    .Build());
+            }
         }
 
         private IEnumerator RunInterstitialTimer()
@@ -47,7 +52,10 @@ namespace cln.Sources.Services
 
         public void RequestBanner()
         {
-            _bannerView.LoadAd(new AdRequest.Builder().AddExtra("max_ad_content_rating", "G").Build());
+            _bannerView.LoadAd(new AdRequest.Builder()
+                .AddExtra("max_ad_content_rating", "G")
+//                .AddExtra("tag_for_under_age_of_consent", "true")
+                .Build());
         }
 
         public void ShowInterstitial()
