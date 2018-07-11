@@ -16,8 +16,9 @@ namespace cln
         {
             foreach (var cubeEntity in _cubeGroup.GetEntities())
             {
-                cubeEntity.isGrounded = Physics.Linecast(cubeEntity.view.value.transform.position + Vector3.right * 0.5f,
-                    cubeEntity.view.value.transform.position + Vector3.down * 0.52f);
+                var transform = cubeEntity.view.value.transform;
+                cubeEntity.isGrounded = Physics.Linecast(transform.position + Vector3.right * 0.5f,
+                    transform.position + Vector3.down * 0.52f);
 
                 if (!cubeEntity.isGrounded)
                 {
