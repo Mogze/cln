@@ -22,13 +22,8 @@ namespace cln
 
                 if (!cubeEntity.isGrounded)
                 {
-                    cubeEntity.ReplaceVelocity(cubeEntity.velocity.value + GameConfig.JumpDeceleration);
+                    cubeEntity.ReplaceVelocity(cubeEntity.velocity.value + GameConfig.JumpDeceleration * Time.deltaTime);
                 }
-//                else if (!cubeEntity.isJumping)
-//                {
-//                    cubeEntity.ReplaceVelocity(
-//                        new Vector3(cubeEntity.velocity.value.x, 0f, cubeEntity.velocity.value.z));
-//                }
             }
         }
     }
