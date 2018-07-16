@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace cln
 {
-    public sealed class CameraMoveSystem : IInitializeSystem, IExecuteSystem
+    public sealed class CameraMoveSystem : IInitializeSystem, IExecuteSystem, ITearDownSystem
     {
         private readonly IContext<GameEntity> _context;
         private Transform _cameraTransform;
@@ -25,6 +25,11 @@ namespace cln
         {
             var diff = new Vector3(_cubeEntity.position.value.x + 8f, _cubeEntity.position.value.y + 5f, -10f) - _cameraTransform.position;
             _cameraTransform.Translate(diff * 2f * Time.deltaTime);
+        }
+
+        public void TearDown()
+        {
+            _cameraTransform.localPosition = new Vector3(0f, 0f, -10f);
         }
     }
 }
