@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using cln.Sources.Utilities;
 using Entitas;
 using UnityEngine;
 
@@ -11,7 +12,7 @@ namespace cln
         public ScoreSystem(IContext<GameEntity> context) : base(context)
         {
             _highScoreEntity = context.CreateEntity();
-            _highScoreEntity.AddHighScore(PlayerPrefs.GetInt("high_score"));
+            _highScoreEntity.AddHighScore(PlayerPrefs.GetInt(GameConsts.Persistence.HighScoreKey));
         }
 
         protected override ICollector<GameEntity> GetTrigger(IContext<GameEntity> context)
@@ -30,7 +31,7 @@ namespace cln
             if (scoreEntity.gameScore.value > _highScoreEntity.highScore.value)
             {
                 _highScoreEntity.ReplaceHighScore(scoreEntity.gameScore.value);
-                PlayerPrefs.SetInt("high_score", _highScoreEntity.highScore.value);
+                PlayerPrefs.SetInt(GameConsts.Persistence.HighScoreKey, _highScoreEntity.highScore.value);
             }
         }
     }
