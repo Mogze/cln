@@ -16,8 +16,11 @@ namespace cln
 
             _elements.PlayButton.onClick.AddListener(OnClickPlay);
             _elements.LeaderboardButton.onClick.AddListener(OnClickLeaderboard);
+            _elements.ToggleSoundButton.onClick.AddListener(OnClickToggleSound);
             _elements.LastScoreText.text = "Last:" + 0;
             _elements.HighScoreText.text = "High:" + PlayerPrefs.GetInt("high_score");
+            _elements.SoundImages[0].SetActive(Services.GetAudioService().IsMuted);
+            _elements.SoundImages[1].SetActive(!Services.GetAudioService().IsMuted);
         }
 
         private void OnEnable()
@@ -42,6 +45,13 @@ namespace cln
         {
             Services.GetGpgService().ShowLeaderboard();
         }
+        
+        private void OnClickToggleSound()
+        {
+            Services.GetAudioService().ToggleSound();
+            _elements.SoundImages[0].SetActive(Services.GetAudioService().IsMuted);
+            _elements.SoundImages[1].SetActive(!Services.GetAudioService().IsMuted);
+        }
 
         public void OnGameScore(GameEntity entity, int value)
         {
@@ -52,6 +62,7 @@ namespace cln
         {
             _elements.PlayButton.onClick.RemoveListener(OnClickPlay);
             _elements.LeaderboardButton.onClick.RemoveListener(OnClickLeaderboard);
+            _elements.ToggleSoundButton.onClick.RemoveListener(OnClickToggleSound);
         }
 
         [Serializable]
@@ -61,6 +72,8 @@ namespace cln
             public Text HighScoreText;
             public Button PlayButton;
             public Button LeaderboardButton;
+            public Button ToggleSoundButton;
+            public GameObject[] SoundImages;
         }
     }
 }
