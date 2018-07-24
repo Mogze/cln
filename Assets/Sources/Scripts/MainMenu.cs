@@ -1,5 +1,6 @@
 ﻿using System;
 using cln.Sources.Services;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -17,8 +18,8 @@ namespace cln
             _elements.PlayButton.onClick.AddListener(OnClickPlay);
             _elements.LeaderboardButton.onClick.AddListener(OnClickLeaderboard);
             _elements.ToggleSoundButton.onClick.AddListener(OnClickToggleSound);
-            _elements.LastScoreText.text = "Last:" + 0;
-            _elements.HighScoreText.text = "High:" + PlayerPrefs.GetInt("high_score");
+            _elements.LastScoreText.text = "0";
+            _elements.HighScoreText.text = PlayerPrefs.GetInt("high_score").ToString();
             _elements.SoundImages[0].SetActive(Services.GetAudioService().IsMuted);
             _elements.SoundImages[1].SetActive(!Services.GetAudioService().IsMuted);
         }
@@ -27,7 +28,7 @@ namespace cln
         {
             _listener = Contexts.sharedInstance.game.CreateEntity();
             _listener.AddGameScoreListener(this);
-            _elements.HighScoreText.text = "High:" + PlayerPrefs.GetInt("high_score");
+            _elements.HighScoreText.text = PlayerPrefs.GetInt("high_score").ToString();
         }
 
         private void OnClickPlay()
@@ -55,7 +56,7 @@ namespace cln
 
         public void OnGameScore(GameEntity entity, int value)
         {
-            _elements.LastScoreText.text = "Last:" + value;
+            _elements.LastScoreText.text = value.ToString();
         }
 
         private void OnDestroy()
@@ -68,8 +69,8 @@ namespace cln
         [Serializable]
         private struct Elements
         {
-            public Text LastScoreText;
-            public Text HighScoreText;
+            public TextMeshProUGUI LastScoreText;
+            public TextMeshProUGUI HighScoreText;
             public Button PlayButton;
             public Button LeaderboardButton;
             public Button ToggleSoundButton;
