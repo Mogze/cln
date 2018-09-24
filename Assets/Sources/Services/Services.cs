@@ -8,6 +8,7 @@ namespace cln.Sources.Services
 
         public static void Initialize()
         {
+            _services.Add(new DataService());
             _services.Add(new GpgService());
             _services.Add(new AdService());
             _services.Add(new AudioService());
@@ -18,19 +19,24 @@ namespace cln.Sources.Services
             }
         }
 
+        public static DataService GetDataService()
+        {
+            return (DataService) _services[0];
+        }
+
         public static GpgService GetGpgService()
         {
-            return (GpgService) _services[0];
+            return (GpgService) _services[1];
         }
 
         public static AdService GetAdService()
         {
-            return (AdService) _services[1];
+            return (AdService) _services[2];
         }
 
         public static AudioService GetAudioService()
         {
-            return (AudioService) _services[2];
+            return (AudioService) _services[3];
         }
     }
 }

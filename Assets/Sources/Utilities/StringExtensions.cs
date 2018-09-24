@@ -14,7 +14,7 @@ namespace zehreken.i_cheat.Extensions
             return string.Format("<b>{0}</b>", s);
         }
 
-        public static string Color(this string s, Color color)
+        public static string Color(this string s, Color32 color)
         {
             return string.Format("<color={0}>{1}</color>", color, s);
         }
