@@ -20,8 +20,11 @@ namespace cln.Sources.Services
 		{
 		}
 
+		// REVIEW: Try a more generic approach
+		
 		public void SetBool(string key, string value)
 		{
+			
 		}
 
 		public void SetInt(string key, int value)

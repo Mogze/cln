@@ -1,42 +1,49 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace cln.Sources.Services
 {
-    public static class Services
-    {
-        private static List<IService> _services = new List<IService>();
+	public static class Services
+	{
+		private static Dictionary<Type, IService> _services = new Dictionary<Type, IService>();
 
-        public static void Initialize()
-        {
-            _services.Add(new DataService());
-            _services.Add(new GpgService());
-            _services.Add(new AdService());
-            _services.Add(new AudioService());
+		public static void Initialize()
+		{
+			_services.Add(typeof(DataService), new DataService());
+			_services.Add(typeof(GpgService), new GpgService());
+			_services.Add(typeof(AdService), new AdService());
+			_services.Add(typeof(AudioService), new AudioService());
 
-            foreach (var service in _services)
-            {
-                service.Initialize();
-            }
-        }
 
-        public static DataService GetDataService()
-        {
-            return (DataService) _services[0];
-        }
+			foreach (var service in _services)
+			{
+				service.Value.Initialize();
+			}
+		}
 
-        public static GpgService GetGpgService()
-        {
-            return (GpgService) _services[1];
-        }
+		private static T GetService<T>()
+		{
+			return (T) _services[typeof(T)];
+		}
 
-        public static AdService GetAdService()
-        {
-            return (AdService) _services[2];
-        }
+		public static DataService GetDataService()
+		{
+			return GetService<DataService>();
+		}
 
-        public static AudioService GetAudioService()
-        {
-            return (AudioService) _services[3];
-        }
-    }
+		public static GpgService GetGpgService()
+		{
+			return GetService<GpgService>();
+		}
+
+		public static AdService GetAdService()
+		{
+			return GetService<AdService>();
+		}
+
+		public static AudioService GetAudioService()
+		{
+			return GetService<AudioService>();
+		}
+	}
 }
