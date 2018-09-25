@@ -14,7 +14,6 @@ namespace cln.Sources.Services
 			_services.Add(typeof(AdService), new AdService());
 			_services.Add(typeof(AudioService), new AudioService());
 
-
 			foreach (var service in _services)
 			{
 				service.Value.Initialize();

@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
 using zehreken.i_cheat;
 using zehreken.i_cheat.Extensions;
@@ -7,13 +8,14 @@ namespace cln.Sources.Services
 {
 	public class DataService : IService
 	{
-		private const string Keys = "keys";
+		private const string Keys = "KEYS";
 		private List<string> _keys;
 
 		// Insert database here, PlayerPrefs, folder or cloud adapter
 		public DataService()
 		{
 			Dbg.Log("DataService is Started".Color(Color.green));
+			_keys = JsonUtility.FromJson<List<string>>(PlayerPrefs.GetString(Keys));
 		}
 
 		public void Initialize()
@@ -21,10 +23,40 @@ namespace cln.Sources.Services
 		}
 
 		// REVIEW: Try a more generic approach
-		
+
+		public void Set<T>(string key, T value, bool forceWrite = false)
+		{
+			if (!_keys.Contains(key))
+			{
+				_keys.Add(key);
+			}
+
+			PlayerPrefs.SetString(key, value.ToString());
+			if (forceWrite)
+			{
+				ForceWrite();
+			}
+		}
+
+		public T Get<T>(string key)
+		{
+			if (!_keys.Contains(key))
+			{
+				throw new Exception("Key not found");
+			}
+
+			return (T) Convert.ChangeType(PlayerPrefs.GetString(key), typeof(T));
+		}
+
+		private void ForceWrite()
+		{
+			var keysJson = JsonUtility.ToJson(_keys);
+			PlayerPrefs.SetString(Keys, keysJson);
+			PlayerPrefs.Save();
+		}
+
 		public void SetBool(string key, string value)
 		{
-			
 		}
 
 		public void SetInt(string key, int value)
