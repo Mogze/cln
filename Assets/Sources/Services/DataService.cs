@@ -9,13 +9,16 @@ namespace cln.Sources.Services
 	public class DataService : IService
 	{
 		private const string Keys = "KEYS";
-		private List<string> _keys;
+		private List<string> _keys = new List<string>();
 
 		// Insert database here, PlayerPrefs, folder or cloud adapter
 		public DataService()
 		{
 			Dbg.Log("DataService is Started".Color(Color.green));
-			_keys = JsonUtility.FromJson<List<string>>(PlayerPrefs.GetString(Keys));
+			if (PlayerPrefs.HasKey("KEYS"))
+			{
+				_keys = JsonUtility.FromJson<List<string>>(PlayerPrefs.GetString(Keys));
+			}
 		}
 
 		public void Initialize()
@@ -53,6 +56,11 @@ namespace cln.Sources.Services
 			var keysJson = JsonUtility.ToJson(_keys);
 			PlayerPrefs.SetString(Keys, keysJson);
 			PlayerPrefs.Save();
+		}
+
+		public void DeleteAll()
+		{
+			PlayerPrefs.DeleteAll();
 		}
 
 		public void SetBool(string key, string value)
