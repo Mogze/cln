@@ -25,7 +25,9 @@ namespace cln.Sources.Services
 		{
 		}
 
-		// REVIEW: Try a more generic approach
+		// REVIEW: BIG ISSUE
+		// User can use the same key to write a different type of data
+		// Example: first save bool and then later save int using the same key
 
 		public void Set<T>(string key, T value, bool forceWrite = false)
 		{
