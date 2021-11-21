@@ -10,7 +10,7 @@ namespace cln.Sources.Services
         public GpgService()
         {
             Dbg.Log("GPGService is Started".Color(Color.green));
-            PlayGamesPlatform.Activate();
+            // PlayGamesPlatform.Activate();
         }
 
         public void Initialize()
