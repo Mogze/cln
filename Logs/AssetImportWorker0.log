@@ -769,3 +769,506 @@ AssetImportParameters requested are different than current active one (requested
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Refreshing native plugins compatible for Editor in 21.84 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 154 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 154 unused Assets / (25.1 KB). Loaded Objects now: 2178.
+Memory consumption went from 135.4 MB to 135.3 MB.
+Total: 10.358098 ms (FindLiveObjects: 0.271793 ms CreateObjectMapping: 0.226305 ms MarkObjects: 9.795799 ms  DeleteObjects: 0.062683 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Refreshing native plugins compatible for Editor in 23.80 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 154 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 154 unused Assets / (25.1 KB). Loaded Objects now: 2178.
+Memory consumption went from 135.4 MB to 135.3 MB.
+Total: 8.870319 ms (FindLiveObjects: 0.216567 ms CreateObjectMapping: 0.073764 ms MarkObjects: 8.519362 ms  DeleteObjects: 0.059172 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.010227 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for Android target not found
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 1.67 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Loaded VersionHandlerImpl
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Google.Logger:Log (string,Google.LogLevel)
+Google.VersionHandlerImpl:Log (string,bool,Google.LogLevel)
+Google.VersionHandlerImpl:.cctor ()
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[]) (at /Users/bokken/buildslave/unity/build/Editor/Mono/EditorAssemblies.cs:126)
+
+(Filename: /Users/bokken/buildslave/unity/build/Editor/Mono/EditorAssemblies.cs Line: 126)
+
+Detected .NET version 4.5
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Google.Logger:Log (string,Google.LogLevel)
+Google.VersionHandlerImpl:Log (string,bool,Google.LogLevel)
+Google.VersionHandlerImpl/DotNetVersionUpdater:.cctor ()
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[]) (at /Users/bokken/buildslave/unity/build/Editor/Mono/EditorAssemblies.cs:126)
+
+(Filename: /Users/bokken/buildslave/unity/build/Editor/Mono/EditorAssemblies.cs Line: 126)
+
+System.TypeInitializationException: The type initializer for 'GooglePlayServices.PlayServicesResolver' threw an exception. ---> System.Reflection.AmbiguousMatchException: Ambiguous match found.
+  at System.RuntimeType.GetMethodImplCommon (System.String name, System.Int32 genericParameterCount, System.Reflection.BindingFlags bindingAttr, System.Reflection.Binder binder, System.Reflection.CallingConventions callConv, System.Type[] types, System.Reflection.ParameterModifier[] modifiers) [0x00050] in <e38a6d3ee47c43eb9b2e49c63fc0aa48>:0 
+  at System.RuntimeType.GetMethodImpl (System.String name, System.Reflection.BindingFlags bindingAttr, System.Reflection.Binder binder, System.Reflection.CallingConventions callConv, System.Type[] types, System.Reflection.ParameterModifier[] modifiers) [0x00000] in <e38a6d3ee47c43eb9b2e49c63fc0aa48>:0 
+  at System.Type.GetMethod (System.String name, System.Reflection.BindingFlags bindingAttr) [0x0000e] in <e38a6d3ee47c43eb9b2e49c63fc0aa48>:0 
+  at System.Type.GetMethod (System.String name) [0x00000] in <e38a6d3ee47c43eb9b2e49c63fc0aa48>:0 
+  at GooglePlayServices.UnityCompat.get_Unity56AndAboveApplicationIdentifier () [0x00000] in <f247fa80bb68491583803ad0dd09f863>:0 
+  at GooglePlayServices.UnityCompat.get_ApplicationId () [0x00000] in <f247fa80bb68491583803ad0dd09f863>:0 
+  at GooglePlayServices.PlayServicesResolver..cctor () [0x0002a] in <f247fa80bb68491583803ad0dd09f863>:0 
+   --- End of inner exception stack trace ---
+  at Firebase.Editor.GenerateXmlFromGoogleServicesJson..cctor () [0x001c1] in <543ea8dbd6614b6d99a1b4522105256d>:0 
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[]) (at /Users/bokken/buildslave/unity/build/Editor/Mono/EditorAssemblies.cs:130)
+
+(Filename: /Users/bokken/buildslave/unity/build/Editor/Mono/EditorAssemblies.cs Line: 130)
+
+System.TypeInitializationException: The type initializer for 'GooglePlayServices.PlayServicesResolver' threw an exception. ---> System.Reflection.AmbiguousMatchException: Ambiguous match found.
+  at System.RuntimeType.GetMethodImplCommon (System.String name, System.Int32 genericParameterCount, System.Reflection.BindingFlags bindingAttr, System.Reflection.Binder binder, System.Reflection.CallingConventions callConv, System.Type[] types, System.Reflection.ParameterModifier[] modifiers) [0x00050] in <e38a6d3ee47c43eb9b2e49c63fc0aa48>:0 
+  at System.RuntimeType.GetMethodImpl (System.String name, System.Reflection.BindingFlags bindingAttr, System.Reflection.Binder binder, System.Reflection.CallingConventions callConv, System.Type[] types, System.Reflection.ParameterModifier[] modifiers) [0x00000] in <e38a6d3ee47c43eb9b2e49c63fc0aa48>:0 
+  at System.Type.GetMethod (System.String name, System.Reflection.BindingFlags bindingAttr) [0x0000e] in <e38a6d3ee47c43eb9b2e49c63fc0aa48>:0 
+  at System.Type.GetMethod (System.String name) [0x00000] in <e38a6d3ee47c43eb9b2e49c63fc0aa48>:0 
+  at GooglePlayServices.UnityCompat.get_Unity56AndAboveApplicationIdentifier () [0x00000] in <f247fa80bb68491583803ad0dd09f863>:0 
+  at GooglePlayServices.UnityCompat.get_ApplicationId () [0x00000] in <f247fa80bb68491583803ad0dd09f863>:0 
+  at GooglePlayServices.PlayServicesResolver..cctor () [0x0002a] in <f247fa80bb68491583803ad0dd09f863>:0 
+   --- End of inner exception stack trace ---
+  at Firebase.Editor.XcodeProjectPatcher..cctor () [0x000d4] in <543ea8dbd6614b6d99a1b4522105256d>:0 
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[]) (at /Users/bokken/buildslave/unity/build/Editor/Mono/EditorAssemblies.cs:130)
+
+(Filename: /Users/bokken/buildslave/unity/build/Editor/Mono/EditorAssemblies.cs Line: 130)
+
+System.Reflection.AmbiguousMatchException: Ambiguous match found.
+  at System.RuntimeType.GetMethodImplCommon (System.String name, System.Int32 genericParameterCount, System.Reflection.BindingFlags bindingAttr, System.Reflection.Binder binder, System.Reflection.CallingConventions callConv, System.Type[] types, System.Reflection.ParameterModifier[] modifiers) [0x00050] in <e38a6d3ee47c43eb9b2e49c63fc0aa48>:0 
+  at System.RuntimeType.GetMethodImpl (System.String name, System.Reflection.BindingFlags bindingAttr, System.Reflection.Binder binder, System.Reflection.CallingConventions callConv, System.Type[] types, System.Reflection.ParameterModifier[] modifiers) [0x00000] in <e38a6d3ee47c43eb9b2e49c63fc0aa48>:0 
+  at System.Type.GetMethod (System.String name, System.Reflection.BindingFlags bindingAttr) [0x0000e] in <e38a6d3ee47c43eb9b2e49c63fc0aa48>:0 
+  at System.Type.GetMethod (System.String name) [0x00000] in <e38a6d3ee47c43eb9b2e49c63fc0aa48>:0 
+  at GooglePlayServices.UnityCompat.get_Unity56AndAboveApplicationIdentifier () [0x00000] in <f247fa80bb68491583803ad0dd09f863>:0 
+  at GooglePlayServices.UnityCompat.get_ApplicationId () [0x00000] in <f247fa80bb68491583803ad0dd09f863>:0 
+  at GooglePlayServices.PlayServicesResolver..cctor () [0x0002a] in <f247fa80bb68491583803ad0dd09f863>:0 
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[]) (at /Users/bokken/buildslave/unity/build/Editor/Mono/EditorAssemblies.cs:130)
+
+(Filename: /Users/bokken/buildslave/unity/build/Editor/Mono/EditorAssemblies.cs Line: 130)
+
+Forcing NO_GPGS to be defined for iOS builds.
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+GooglePlayGames.Editor.ForceNoGpgsForIOS:setNoGPGS () (at Assets/GooglePlayGames/Editor/ForceNoGpgsForIOS.cs:49)
+GooglePlayGames.Editor.ForceNoGpgsForIOS:.cctor () (at Assets/GooglePlayGames/Editor/ForceNoGpgsForIOS.cs:35)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[]) (at /Users/bokken/buildslave/unity/build/Editor/Mono/EditorAssemblies.cs:126)
+
+(Filename: Assets/GooglePlayGames/Editor/ForceNoGpgsForIOS.cs Line: 49)
+
+Mono: successfully reloaded assembly
+- Completed reload, in  2.495 seconds
+Domain Reload Profiling:
+	ReloadAssembly (2496ms)
+		BeginReloadAssembly (245ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (20ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (89ms)
+		EndReloadAssembly (2076ms)
+			LoadAssemblies (121ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (296ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (93ms)
+			SetupLoadedEditorAssemblies (1448ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (41ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (2ms)
+				BeforeProcessingInitializeOnLoad (70ms)
+				ProcessInitializeOnLoadAttributes (1105ms)
+				ProcessInitializeOnLoadMethodAttributes (227ms)
+				AfterProcessingInitializeOnLoad (1ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (8ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 7.89 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1795 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 154 unused Assets / (25.0 KB). Loaded Objects now: 2181.
+Memory consumption went from 169.5 MB to 169.5 MB.
+Total: 10.559093 ms (FindLiveObjects: 0.220371 ms CreateObjectMapping: 0.089296 ms MarkObjects: 10.177707 ms  DeleteObjects: 0.070322 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.012592 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for Android target not found
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 1.26 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Loaded VersionHandlerImpl
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Google.Logger:Log (string,Google.LogLevel)
+Google.VersionHandlerImpl:Log (string,bool,Google.LogLevel)
+Google.VersionHandlerImpl:.cctor ()
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[]) (at /Users/bokken/buildslave/unity/build/Editor/Mono/EditorAssemblies.cs:126)
+
+(Filename: /Users/bokken/buildslave/unity/build/Editor/Mono/EditorAssemblies.cs Line: 126)
+
+Detected .NET version 4.5
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Google.Logger:Log (string,Google.LogLevel)
+Google.VersionHandlerImpl:Log (string,bool,Google.LogLevel)
+Google.VersionHandlerImpl/DotNetVersionUpdater:.cctor ()
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[]) (at /Users/bokken/buildslave/unity/build/Editor/Mono/EditorAssemblies.cs:126)
+
+(Filename: /Users/bokken/buildslave/unity/build/Editor/Mono/EditorAssemblies.cs Line: 126)
+
+System.TypeInitializationException: The type initializer for 'GooglePlayServices.PlayServicesResolver' threw an exception. ---> System.Reflection.AmbiguousMatchException: Ambiguous match found.
+  at System.RuntimeType.GetMethodImplCommon (System.String name, System.Int32 genericParameterCount, System.Reflection.BindingFlags bindingAttr, System.Reflection.Binder binder, System.Reflection.CallingConventions callConv, System.Type[] types, System.Reflection.ParameterModifier[] modifiers) [0x00050] in <e38a6d3ee47c43eb9b2e49c63fc0aa48>:0 
+  at System.RuntimeType.GetMethodImpl (System.String name, System.Reflection.BindingFlags bindingAttr, System.Reflection.Binder binder, System.Reflection.CallingConventions callConv, System.Type[] types, System.Reflection.ParameterModifier[] modifiers) [0x00000] in <e38a6d3ee47c43eb9b2e49c63fc0aa48>:0 
+  at System.Type.GetMethod (System.String name, System.Reflection.BindingFlags bindingAttr) [0x0000e] in <e38a6d3ee47c43eb9b2e49c63fc0aa48>:0 
+  at System.Type.GetMethod (System.String name) [0x00000] in <e38a6d3ee47c43eb9b2e49c63fc0aa48>:0 
+  at GooglePlayServices.UnityCompat.get_Unity56AndAboveApplicationIdentifier () [0x00000] in <f247fa80bb68491583803ad0dd09f863>:0 
+  at GooglePlayServices.UnityCompat.get_ApplicationId () [0x00000] in <f247fa80bb68491583803ad0dd09f863>:0 
+  at GooglePlayServices.PlayServicesResolver..cctor () [0x0002a] in <f247fa80bb68491583803ad0dd09f863>:0 
+   --- End of inner exception stack trace ---
+  at Firebase.Editor.GenerateXmlFromGoogleServicesJson..cctor () [0x001c1] in <543ea8dbd6614b6d99a1b4522105256d>:0 
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[]) (at /Users/bokken/buildslave/unity/build/Editor/Mono/EditorAssemblies.cs:130)
+
+(Filename: /Users/bokken/buildslave/unity/build/Editor/Mono/EditorAssemblies.cs Line: 130)
+
+System.TypeInitializationException: The type initializer for 'GooglePlayServices.PlayServicesResolver' threw an exception. ---> System.Reflection.AmbiguousMatchException: Ambiguous match found.
+  at System.RuntimeType.GetMethodImplCommon (System.String name, System.Int32 genericParameterCount, System.Reflection.BindingFlags bindingAttr, System.Reflection.Binder binder, System.Reflection.CallingConventions callConv, System.Type[] types, System.Reflection.ParameterModifier[] modifiers) [0x00050] in <e38a6d3ee47c43eb9b2e49c63fc0aa48>:0 
+  at System.RuntimeType.GetMethodImpl (System.String name, System.Reflection.BindingFlags bindingAttr, System.Reflection.Binder binder, System.Reflection.CallingConventions callConv, System.Type[] types, System.Reflection.ParameterModifier[] modifiers) [0x00000] in <e38a6d3ee47c43eb9b2e49c63fc0aa48>:0 
+  at System.Type.GetMethod (System.String name, System.Reflection.BindingFlags bindingAttr) [0x0000e] in <e38a6d3ee47c43eb9b2e49c63fc0aa48>:0 
+  at System.Type.GetMethod (System.String name) [0x00000] in <e38a6d3ee47c43eb9b2e49c63fc0aa48>:0 
+  at GooglePlayServices.UnityCompat.get_Unity56AndAboveApplicationIdentifier () [0x00000] in <f247fa80bb68491583803ad0dd09f863>:0 
+  at GooglePlayServices.UnityCompat.get_ApplicationId () [0x00000] in <f247fa80bb68491583803ad0dd09f863>:0 
+  at GooglePlayServices.PlayServicesResolver..cctor () [0x0002a] in <f247fa80bb68491583803ad0dd09f863>:0 
+   --- End of inner exception stack trace ---
+  at Firebase.Editor.XcodeProjectPatcher..cctor () [0x000d4] in <543ea8dbd6614b6d99a1b4522105256d>:0 
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[]) (at /Users/bokken/buildslave/unity/build/Editor/Mono/EditorAssemblies.cs:130)
+
+(Filename: /Users/bokken/buildslave/unity/build/Editor/Mono/EditorAssemblies.cs Line: 130)
+
+System.Reflection.AmbiguousMatchException: Ambiguous match found.
+  at System.RuntimeType.GetMethodImplCommon (System.String name, System.Int32 genericParameterCount, System.Reflection.BindingFlags bindingAttr, System.Reflection.Binder binder, System.Reflection.CallingConventions callConv, System.Type[] types, System.Reflection.ParameterModifier[] modifiers) [0x00050] in <e38a6d3ee47c43eb9b2e49c63fc0aa48>:0 
+  at System.RuntimeType.GetMethodImpl (System.String name, System.Reflection.BindingFlags bindingAttr, System.Reflection.Binder binder, System.Reflection.CallingConventions callConv, System.Type[] types, System.Reflection.ParameterModifier[] modifiers) [0x00000] in <e38a6d3ee47c43eb9b2e49c63fc0aa48>:0 
+  at System.Type.GetMethod (System.String name, System.Reflection.BindingFlags bindingAttr) [0x0000e] in <e38a6d3ee47c43eb9b2e49c63fc0aa48>:0 
+  at System.Type.GetMethod (System.String name) [0x00000] in <e38a6d3ee47c43eb9b2e49c63fc0aa48>:0 
+  at GooglePlayServices.UnityCompat.get_Unity56AndAboveApplicationIdentifier () [0x00000] in <f247fa80bb68491583803ad0dd09f863>:0 
+  at GooglePlayServices.UnityCompat.get_ApplicationId () [0x00000] in <f247fa80bb68491583803ad0dd09f863>:0 
+  at GooglePlayServices.PlayServicesResolver..cctor () [0x0002a] in <f247fa80bb68491583803ad0dd09f863>:0 
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[]) (at /Users/bokken/buildslave/unity/build/Editor/Mono/EditorAssemblies.cs:130)
+
+(Filename: /Users/bokken/buildslave/unity/build/Editor/Mono/EditorAssemblies.cs Line: 130)
+
+Forcing NO_GPGS to be defined for iOS builds.
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+GooglePlayGames.Editor.ForceNoGpgsForIOS:setNoGPGS () (at Assets/GooglePlayGames/Editor/ForceNoGpgsForIOS.cs:49)
+GooglePlayGames.Editor.ForceNoGpgsForIOS:.cctor () (at Assets/GooglePlayGames/Editor/ForceNoGpgsForIOS.cs:35)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[]) (at /Users/bokken/buildslave/unity/build/Editor/Mono/EditorAssemblies.cs:126)
+
+(Filename: Assets/GooglePlayGames/Editor/ForceNoGpgsForIOS.cs Line: 49)
+
+Mono: successfully reloaded assembly
+- Completed reload, in  2.603 seconds
+Domain Reload Profiling:
+	ReloadAssembly (2605ms)
+		BeginReloadAssembly (166ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (11ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (55ms)
+		EndReloadAssembly (2275ms)
+			LoadAssemblies (93ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (262ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (81ms)
+			SetupLoadedEditorAssemblies (1722ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (62ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (81ms)
+				ProcessInitializeOnLoadAttributes (1258ms)
+				ProcessInitializeOnLoadMethodAttributes (316ms)
+				AfterProcessingInitializeOnLoad (2ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (12ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 11.88 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1795 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 154 unused Assets / (25.0 KB). Loaded Objects now: 2184.
+Memory consumption went from 169.7 MB to 169.7 MB.
+Total: 10.093391 ms (FindLiveObjects: 0.563199 ms CreateObjectMapping: 0.411986 ms MarkObjects: 9.058730 ms  DeleteObjects: 0.056808 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 851.258706 seconds.
+  path: Assets/Scenes/Main.unity
+  artifactKey: Guid(5386eb4dbdf80914a87dae2b1782ba62) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Main.unity using Guid(5386eb4dbdf80914a87dae2b1782ba62) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6c221f7f2f6efd84bd7ce72c94941b2d') in 0.013041 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 138.875561 seconds.
+  path: Assets/Scenes/Icon.unity
+  artifactKey: Guid(22fa07269b23fad459aee1fe65aea18e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Icon.unity using Guid(22fa07269b23fad459aee1fe65aea18e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '24d60885d7f12c7ea3047b78cef5e4c9') in 0.001972 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005585 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for Android target not found
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 1.37 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Loaded VersionHandlerImpl
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Google.Logger:Log (string,Google.LogLevel)
+Google.VersionHandlerImpl:Log (string,bool,Google.LogLevel)
+Google.VersionHandlerImpl:.cctor ()
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[]) (at /Users/bokken/buildslave/unity/build/Editor/Mono/EditorAssemblies.cs:126)
+
+(Filename: /Users/bokken/buildslave/unity/build/Editor/Mono/EditorAssemblies.cs Line: 126)
+
+Detected .NET version 4.5
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Google.Logger:Log (string,Google.LogLevel)
+Google.VersionHandlerImpl:Log (string,bool,Google.LogLevel)
+Google.VersionHandlerImpl/DotNetVersionUpdater:.cctor ()
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[]) (at /Users/bokken/buildslave/unity/build/Editor/Mono/EditorAssemblies.cs:126)
+
+(Filename: /Users/bokken/buildslave/unity/build/Editor/Mono/EditorAssemblies.cs Line: 126)
+
+System.TypeInitializationException: The type initializer for 'GooglePlayServices.PlayServicesResolver' threw an exception. ---> System.Reflection.AmbiguousMatchException: Ambiguous match found.
+  at System.RuntimeType.GetMethodImplCommon (System.String name, System.Int32 genericParameterCount, System.Reflection.BindingFlags bindingAttr, System.Reflection.Binder binder, System.Reflection.CallingConventions callConv, System.Type[] types, System.Reflection.ParameterModifier[] modifiers) [0x00050] in <e38a6d3ee47c43eb9b2e49c63fc0aa48>:0 
+  at System.RuntimeType.GetMethodImpl (System.String name, System.Reflection.BindingFlags bindingAttr, System.Reflection.Binder binder, System.Reflection.CallingConventions callConv, System.Type[] types, System.Reflection.ParameterModifier[] modifiers) [0x00000] in <e38a6d3ee47c43eb9b2e49c63fc0aa48>:0 
+  at System.Type.GetMethod (System.String name, System.Reflection.BindingFlags bindingAttr) [0x0000e] in <e38a6d3ee47c43eb9b2e49c63fc0aa48>:0 
+  at System.Type.GetMethod (System.String name) [0x00000] in <e38a6d3ee47c43eb9b2e49c63fc0aa48>:0 
+  at GooglePlayServices.UnityCompat.get_Unity56AndAboveApplicationIdentifier () [0x00000] in <f247fa80bb68491583803ad0dd09f863>:0 
+  at GooglePlayServices.UnityCompat.get_ApplicationId () [0x00000] in <f247fa80bb68491583803ad0dd09f863>:0 
+  at GooglePlayServices.PlayServicesResolver..cctor () [0x0002a] in <f247fa80bb68491583803ad0dd09f863>:0 
+   --- End of inner exception stack trace ---
+  at Firebase.Editor.GenerateXmlFromGoogleServicesJson..cctor () [0x001c1] in <543ea8dbd6614b6d99a1b4522105256d>:0 
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[]) (at /Users/bokken/buildslave/unity/build/Editor/Mono/EditorAssemblies.cs:130)
+
+(Filename: /Users/bokken/buildslave/unity/build/Editor/Mono/EditorAssemblies.cs Line: 130)
+
+System.TypeInitializationException: The type initializer for 'GooglePlayServices.PlayServicesResolver' threw an exception. ---> System.Reflection.AmbiguousMatchException: Ambiguous match found.
+  at System.RuntimeType.GetMethodImplCommon (System.String name, System.Int32 genericParameterCount, System.Reflection.BindingFlags bindingAttr, System.Reflection.Binder binder, System.Reflection.CallingConventions callConv, System.Type[] types, System.Reflection.ParameterModifier[] modifiers) [0x00050] in <e38a6d3ee47c43eb9b2e49c63fc0aa48>:0 
+  at System.RuntimeType.GetMethodImpl (System.String name, System.Reflection.BindingFlags bindingAttr, System.Reflection.Binder binder, System.Reflection.CallingConventions callConv, System.Type[] types, System.Reflection.ParameterModifier[] modifiers) [0x00000] in <e38a6d3ee47c43eb9b2e49c63fc0aa48>:0 
+  at System.Type.GetMethod (System.String name, System.Reflection.BindingFlags bindingAttr) [0x0000e] in <e38a6d3ee47c43eb9b2e49c63fc0aa48>:0 
+  at System.Type.GetMethod (System.String name) [0x00000] in <e38a6d3ee47c43eb9b2e49c63fc0aa48>:0 
+  at GooglePlayServices.UnityCompat.get_Unity56AndAboveApplicationIdentifier () [0x00000] in <f247fa80bb68491583803ad0dd09f863>:0 
+  at GooglePlayServices.UnityCompat.get_ApplicationId () [0x00000] in <f247fa80bb68491583803ad0dd09f863>:0 
+  at GooglePlayServices.PlayServicesResolver..cctor () [0x0002a] in <f247fa80bb68491583803ad0dd09f863>:0 
+   --- End of inner exception stack trace ---
+  at Firebase.Editor.XcodeProjectPatcher..cctor () [0x000d4] in <543ea8dbd6614b6d99a1b4522105256d>:0 
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[]) (at /Users/bokken/buildslave/unity/build/Editor/Mono/EditorAssemblies.cs:130)
+
+(Filename: /Users/bokken/buildslave/unity/build/Editor/Mono/EditorAssemblies.cs Line: 130)
+
+System.Reflection.AmbiguousMatchException: Ambiguous match found.
+  at System.RuntimeType.GetMethodImplCommon (System.String name, System.Int32 genericParameterCount, System.Reflection.BindingFlags bindingAttr, System.Reflection.Binder binder, System.Reflection.CallingConventions callConv, System.Type[] types, System.Reflection.ParameterModifier[] modifiers) [0x00050] in <e38a6d3ee47c43eb9b2e49c63fc0aa48>:0 
+  at System.RuntimeType.GetMethodImpl (System.String name, System.Reflection.BindingFlags bindingAttr, System.Reflection.Binder binder, System.Reflection.CallingConventions callConv, System.Type[] types, System.Reflection.ParameterModifier[] modifiers) [0x00000] in <e38a6d3ee47c43eb9b2e49c63fc0aa48>:0 
+  at System.Type.GetMethod (System.String name, System.Reflection.BindingFlags bindingAttr) [0x0000e] in <e38a6d3ee47c43eb9b2e49c63fc0aa48>:0 
+  at System.Type.GetMethod (System.String name) [0x00000] in <e38a6d3ee47c43eb9b2e49c63fc0aa48>:0 
+  at GooglePlayServices.UnityCompat.get_Unity56AndAboveApplicationIdentifier () [0x00000] in <f247fa80bb68491583803ad0dd09f863>:0 
+  at GooglePlayServices.UnityCompat.get_ApplicationId () [0x00000] in <f247fa80bb68491583803ad0dd09f863>:0 
+  at GooglePlayServices.PlayServicesResolver..cctor () [0x0002a] in <f247fa80bb68491583803ad0dd09f863>:0 
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[]) (at /Users/bokken/buildslave/unity/build/Editor/Mono/EditorAssemblies.cs:130)
+
+(Filename: /Users/bokken/buildslave/unity/build/Editor/Mono/EditorAssemblies.cs Line: 130)
+
+Forcing NO_GPGS to be defined for iOS builds.
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+GooglePlayGames.Editor.ForceNoGpgsForIOS:setNoGPGS () (at Assets/GooglePlayGames/Editor/ForceNoGpgsForIOS.cs:49)
+GooglePlayGames.Editor.ForceNoGpgsForIOS:.cctor () (at Assets/GooglePlayGames/Editor/ForceNoGpgsForIOS.cs:35)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[]) (at /Users/bokken/buildslave/unity/build/Editor/Mono/EditorAssemblies.cs:126)
+
+(Filename: Assets/GooglePlayGames/Editor/ForceNoGpgsForIOS.cs Line: 49)
+
+Mono: successfully reloaded assembly
+- Completed reload, in  2.500 seconds
+Domain Reload Profiling:
+	ReloadAssembly (2502ms)
+		BeginReloadAssembly (176ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (12ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (57ms)
+		EndReloadAssembly (2170ms)
+			LoadAssemblies (106ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (250ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (72ms)
+			SetupLoadedEditorAssemblies (1633ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (33ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (88ms)
+				ProcessInitializeOnLoadAttributes (1202ms)
+				ProcessInitializeOnLoadMethodAttributes (305ms)
+				AfterProcessingInitializeOnLoad (3ms)
+				EditorAssembliesLoaded (1ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (11ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 11.59 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1795 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 154 unused Assets / (25.1 KB). Loaded Objects now: 2187.
+Memory consumption went from 170.0 MB to 169.9 MB.
+Total: 11.839528 ms (FindLiveObjects: 0.256160 ms CreateObjectMapping: 0.244827 ms MarkObjects: 10.560676 ms  DeleteObjects: 0.773093 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 31.144549 seconds.
+  path: Assets/Sources/Features
+  artifactKey: Guid(3eca4bb4a64b91e43b676d2525400dee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sources/Features using Guid(3eca4bb4a64b91e43b676d2525400dee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '515d078da30e0b7a676429613c5c3569') in 0.011448 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5.547813 seconds.
+  path: Assets/Sources/Features/GameController.cs
+  artifactKey: Guid(60c14bc572434830a749f1a3b3a11adc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sources/Features/GameController.cs using Guid(60c14bc572434830a749f1a3b3a11adc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c85fdcf63724b093f922e73bd34f04ac') in 0.218052 seconds 
